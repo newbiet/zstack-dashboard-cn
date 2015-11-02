@@ -7,7 +7,7 @@
 </div>
 
 <div>
-    <h3 class="z-h3">BACKUP STORAGE</h3>
+    <h3 class="z-h3">备份存储</h3>
     <div class="btn-group-sm z-btn-bar">
         <button type="button" class="btn btn-default btn-sm" ng-click="funcRefresh()">
             <i class="fa fa-refresh"></i>
@@ -25,7 +25,7 @@
 
         <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px" ng-click="funcCreateBackupStorage(winNewBackupStorage)">
             <i class="fa fa-plus"></i>
-            <span>&nbsp; New Backup Storage</span>
+            <span>&nbsp; 新建备份存储</span>
         </button>
 
         <div id="backupStorageFilterContent" style="display: none">
@@ -44,21 +44,21 @@
 
         <div class="btn-group" ng-show="funcIsActionShow()">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-disabled="funcIsActionDisabled()">
-                Action <span class="caret"></span>
+                操作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">Enable</a></li>
-                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">Disable</a></li>
-                <li><a href ng-show="action.isReconnectShow()" ng-click="action.reconnect()">Reconnect</a></li>
-                <li><a href ng-click="action.attachZone()">Attach Zone</a></li>
-                <li><a href ng-click="action.detachZone()">Detach Zone</a></li>
+                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
+                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
+                <li><a href ng-show="action.isReconnectShow()" ng-click="action.reconnect()">重新连接</a></li>
+                <li><a href ng-click="action.attachZone()">添加区域</a></li>
+                <li><a href ng-click="action.detachZone()">分离区域</a></li>
                 <li class="divider"></li>
-                <li><a href style="color:red" ng-click="funcDeleteBackupStorage(deleteBackupStorage)">Delete</a></li>
+                <li><a href style="color:red" ng-click="funcDeleteBackupStorage(deleteBackupStorage)">删除</a></li>
             </ul>
         </div>
     </div>
 
     <div kendo-grid="backupStorageGrid" k-options="oBackupStorageGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
-    <p class="z-hint">Single click column to show action button</p>
-    <p class="z-hint">Double click column to enter details page</p>
+    <p class="z-hint">单击列中对象显示操作按钮</p>
+    <p class="z-hint">双击列中按钮进入详情页面</p>
 </div>

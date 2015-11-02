@@ -7,23 +7,23 @@
                         No zone has been created. Please go to <a href="/#/zone">zone page</a> to create a new zone.
                     </div>
 
-                    <h4 class="z-win-h4">CLUSTER INFO</h4>
+                    <h4 class="z-win-h4"><!--CLUSTER INFO-->集群信息</h4>
                     <form class="form">
                         <div class="form-group col-sm-24">
-                            <label for="zone">ZONE</label>
+                            <label for="zone"><!--ZONE-->域</label>
                             <select id="zone" kendo-drop-down-list k-options="zoneList" class="z-win-dropdown" ng-model="infoPage.zoneUuid"></select>
                             <p class="z-hint">(Required) select zone where the cluster is being created</p>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="name">NAME</label>
+                            <label for="name"><!--NAME-->名称</label>
                             <input class="form-control z-win-input" type="text" id="name" placeholder="(Required) max length of 255 characters" ng-model="infoPage.name" required data-message="name is required">
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="description">DESCRIPTION</label>
+                            <label for="description"><!--DESCRIPTION-->描述</label>
                             <textarea  class="form-control z-win-input" rows="5" id="description" placeholder="(Optional) max length of 2048 characters" ng-model="infoPage.description"></textarea>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="hypervisor">HYPERVISOR</label>
+                            <label for="hypervisor"><!--HYPERVISOR-->管理程序</label>
                             <select id="hypervisor" kendo-drop-down-list k-options="hypervisorList" class="z-win-dropdown" ng-model="infoPage.hypervisorType"></select>
                             <p class="z-hint">(Required) select hypervisor type of host which this cluster will contain</p>
                         </div>

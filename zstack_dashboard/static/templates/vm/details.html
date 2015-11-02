@@ -26,18 +26,18 @@
           Action <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li><a href ng-click="action.start()" ng-show="action.isActionShow('start')">Start</a></li>
-          <li><a href ng-click="action.stop()" ng-show="action.isActionShow('stop')">Stop</a></li>
-          <li><a href ng-click="action.reboot()" ng-show="action.isActionShow('reboot')">Reboot</a></li>
-          <li><a href ng-click="action.migrate()" ng-show="action.isActionShow('migrate')">Migrate</a></li>
-          <li><a href ng-click="action.console()" ng-show="action.isActionShow('console')">Console</a></li>
-          <li><a href ng-click="action.attachVolume()" ng-show="action.isActionShow('attachVolume')">Attach Volume</a></li>
-          <li><a href ng-click="action.detachVolume()" ng-show="action.isActionShow('detachVolume')">Detach Volume</a></li>
-          <li><a href ng-click="action.attachL3Network()" ng-show="action.isActionShow('attachL3Network')">Attach L3 Network</a></li>
-          <li><a href ng-click="action.detachL3Network()" ng-show="action.isActionShow('detachL3Network')">Detach L3 Network</a></li>
-          <li><a href ng-click="action.changeInstanceOffering()" ng-show="action.isActionShow('changeInstanceOffering')">Change Instance Offering</a></li>
+          <li><a href ng-click="action.start()" ng-show="action.isActionShow('start')">启动</a></li>
+          <li><a href ng-click="action.stop()" ng-show="action.isActionShow('stop')">停止</a></li>
+          <li><a href ng-click="action.reboot()" ng-show="action.isActionShow('reboot')">重启</a></li>
+          <li><a href ng-click="action.migrate()" ng-show="action.isActionShow('migrate')">迁移</a></li>
+          <li><a href ng-click="action.console()" ng-show="action.isActionShow('console')">控制台</a></li>
+          <li><a href ng-click="action.attachVolume()" ng-show="action.isActionShow('attachVolume')">添加卷</a></li>
+          <li><a href ng-click="action.detachVolume()" ng-show="action.isActionShow('detachVolume')">分离卷</a></li>
+          <li><a href ng-click="action.attachL3Network()" ng-show="action.isActionShow('attachL3Network')">添加三层网络</a></li>
+          <li><a href ng-click="action.detachL3Network()" ng-show="action.isActionShow('detachL3Network')">分离三层网络</a></li>
+          <li><a href ng-click="action.changeInstanceOffering()" ng-show="action.isActionShow('changeInstanceOffering')">更改实例配置</a></li>
           <li class="divider"></li>
-          <li><a href style="color:red" ng-click="funcDeleteVmInstance(deleteVmInstance)">Delete</a></li>
+          <li><a href style="color:red" ng-click="funcDeleteVmInstance(deleteVmInstance)">删除</a></li>
         </ul>
       </div>
     </div>
@@ -59,7 +59,7 @@
         <div class="panel-heading">
           <a class="accordion-toggle" data-target="#infoDetails" data-toggle="collapse" href>
             <i class="z-collapse fa fa-chevron-down"></i>
-            <span>&nbsp; DETAILS</span>
+            <span>&nbsp; 详情</span>
           </a>
         </div>
 
@@ -67,15 +67,15 @@
           <div class="panel-body">
             <table class="table z-table-borderless">
               <tr>
-                <td><span class="z-label">DESCRIPTION:</span></td>
+                <td><span class="z-label">描叙:</span></td>
                 <td><span class="z-description">{{model.current.description}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">STATE:</span></td>
+                <td><span class="z-label">状态:</span></td>
                 <td><span class="{{model.current.stateLabel()}}">{{model.current.state}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">HYPERVISOR:</span></td>
+                <td><span class="z-label">虚拟机监视器:</span></td>
                 <td><span>{{model.current.hypervisorType}}</span></td>
               </tr>
               <tr>
@@ -83,55 +83,55 @@
                 <td><span>{{model.current.uuid}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">CPU NUM:</span></td>
+                <td><span class="z-label">CPU数量:</span></td>
                 <td><span>{{cpuNum}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">CPU SPEED:</span></td>
+                <td><span class="z-label">主频:</span></td>
                 <td><span>{{cpuNum}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">MEMORY SIZE:</span></td>
+                <td><span class="z-label">内存大小:</span></td>
                 <td><span>{{memorySize | size}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">HOST NAME:</span></td>
+                <td><span class="z-label">主机名:</span></td>
                 <td><span>{{hostname}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">INSTANCE OFFERING UUID:</span></td>
+                <td><span class="z-label">实例配置模板 UUID:</span></td>
                 <td><a href="/#/instanceOffering/{{model.current.instanceOfferingUuid}}">{{model.current.instanceOfferingUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">DEFAULT L3 NETWORK UUID:</span></td>
+                <td><span class="z-label">默认三层网络 UUID:</span></td>
                 <td><a href="/#/l3Network/{{model.current.defaultL3NetworkUuid}}">{{model.current.defaultL3NetworkUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">IMAGE UUID:</span></td>
+                <td><span class="z-label">镜像 UUID:</span></td>
                 <td><a href="/#/image/{{model.current.imageUuid}}">{{model.current.imageUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">HOST UUID:</span></td>
+                <td><span class="z-label">主机 UUID:</span></td>
                 <td><a href="/#/host/{{model.current.hostUuid}}">{{model.current.hostUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">LAST HOST UUID:</span></td>
+                <td><span class="z-label">最后主机 UUID:</span></td>
                 <td><a href="/#/host/{{model.current.lastHostUuid}}">{{model.current.lastHostUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">CLUSTER UUID:</span></td>
+                <td><span class="z-label">集群 UUID:</span></td>
                 <td><a href="/#/cluster/{{model.current.clusterUuid}}">{{model.current.clusterUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">ZONE UUID:</span></td>
+                <td><span class="z-label">区域 UUID:</span></td>
                 <td><a href="/#/zone/{{model.current.zoneUuid}}">{{model.current.zoneUuid}}</a></td>
               </tr>
               <tr>
-                <td><span class="z-label">CREATED DATE:</span></td>
+                <td><span class="z-label">创建日期:</span></td>
                 <td><span>{{model.current.createDate}}</span></td>
               </tr>
               <tr>
-                <td><span class="z-label">LAST UPDATED DATE:</span></td>
+                <td><span class="z-label">最后更改日期:</span></td>
                 <td><span>{{model.current.lastOpDate}}</span></td>
               </tr>
             </table>

@@ -10,7 +10,7 @@
 </div>
 
 <div>
-    <h3 class="z-h3">VOLUME</h3>
+    <h3 class="z-h3">卷</h3>
     <div class="btn-group-sm z-btn-bar">
         <button type="button" class="btn btn-default btn-sm" ng-click="funcRefresh()">
             <i class="fa fa-refresh"></i>
@@ -28,7 +28,7 @@
 
         <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px" ng-click="funcCreateVolume(winNewVolume)">
             <i class="fa fa-plus"></i>
-            <span>&nbsp; New Volume</span>
+            <span>&nbsp; 新建卷</span>
         </button>
 
         <div id="volumeFilterContent" style="display: none">
@@ -47,22 +47,22 @@
 
         <div class="btn-group" ng-show="funcIsActionShow()">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-disabled="funcIsActionDisabled()">
-                Action <span class="caret"></span>
+                操作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">Enable</a></li>
-                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">Disable</a></li>
-                <li><a href ng-click="action.attach()" ng-show="model.current.isAttachShow()">Attach</a></li>
-                <li><a href ng-click="action.detach()" ng-show="model.current.isDetachShow()">Detach</a></li>
-                <li><a href ng-click="action.createTemplate()" ng-show="model.current.isCreateTemplateShow()">Create Template</a></li>
-                <li><a href ng-click="action.takeSnapshot()" ng-show="model.current.isSnapshotShow()">Take Snapshot</a></li>
+                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
+                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
+                <li><a href ng-click="action.attach()" ng-show="model.current.isAttachShow()">添加</a></li>
+                <li><a href ng-click="action.detach()" ng-show="model.current.isDetachShow()">分离</a></li>
+                <li><a href ng-click="action.createTemplate()" ng-show="model.current.isCreateTemplateShow()">创建模板</a></li>
+                <li><a href ng-click="action.takeSnapshot()" ng-show="model.current.isSnapshotShow()">生成快照</a></li>
                 <li class="divider"></li>
-                <li><a href style="color:red" ng-click="funcDeleteVolume(deleteVolume)" ng-show="model.current.isDeleteShow()">Delete</a></li>
+                <li><a href style="color:red" ng-click="funcDeleteVolume(deleteVolume)" ng-show="model.current.isDeleteShow()">删除</a></li>
             </ul>
         </div>
     </div>
 
     <div kendo-grid="volumeGrid" k-options="oVolumeGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
-    <p class="z-hint">Single click column to show action button</p>
-    <p class="z-hint">Double click column to enter details page</p>
+    <p class="z-hint">单击列中对象显示操作按钮</p>
+    <p class="z-hint">双击列中对象进入详情页面</p>
 </div>

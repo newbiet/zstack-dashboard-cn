@@ -11,7 +11,7 @@
 </div>
 
 <div>
-    <h3 class="z-h3">VM INSTANCE</h3>
+    <h3 class="z-h3">虚拟机</h3>
     <div class="btn-group-sm z-btn-bar">
         <button type="button" class="btn btn-default btn-sm" ng-click="funcRefresh()">
             <i class="fa fa-refresh"></i>
@@ -29,7 +29,7 @@
 
         <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px" ng-click="funcCreateVmInstance(winNewVmInstance)">
             <i class="fa fa-plus"></i>
-            <span>&nbsp; New VmInstance</span>
+            <span>&nbsp; 创建虚拟机</span>
         </button>
 
         <div id="vmInstanceFilterContent" style="display: none">
@@ -48,26 +48,26 @@
 
         <div class="btn-group" ng-show="funcIsActionShow()">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-disabled="funcIsActionDisabled()">
-                Action <span class="caret"></span>
+                操作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.start()" ng-show="action.isActionShow('start')">Start</a></li>
-                <li><a href ng-click="action.stop()" ng-show="action.isActionShow('stop')">Stop</a></li>
-                <li><a href ng-click="action.reboot()" ng-show="action.isActionShow('reboot')">Reboot</a></li>
-                <li><a href ng-click="action.migrate()" ng-show="action.isActionShow('migrate')">Migrate</a></li>
-                <li><a href ng-click="action.console()" ng-show="action.isActionShow('console')">Console</a></li>
-                <li><a href ng-click="action.attachVolume()" ng-show="action.isActionShow('attachVolume')">Attach Volume</a></li>
-                <li><a href ng-click="action.detachVolume()" ng-show="action.isActionShow('detachVolume')">Detach Volume</a></li>
-                <li><a href ng-click="action.attachL3Network()" ng-show="action.isActionShow('attachL3Network')">Attach L3 Network</a></li>
-                <li><a href ng-click="action.detachL3Network()" ng-show="action.isActionShow('detachL3Network')">Detach L3 Network</a></li>
-                <li><a href ng-click="action.changeInstanceOffering()" ng-show="action.isActionShow('changeInstanceOffering')">Change Instance Offering</a></li>
+                <li><a href ng-click="action.start()" ng-show="action.isActionShow('start')">启动</a></li>
+                <li><a href ng-click="action.stop()" ng-show="action.isActionShow('stop')">停止</a></li>
+                <li><a href ng-click="action.reboot()" ng-show="action.isActionShow('reboot')">重启</a></li>
+                <li><a href ng-click="action.migrate()" ng-show="action.isActionShow('migrate')">迁移</a></li>
+                <li><a href ng-click="action.console()" ng-show="action.isActionShow('console')">控制台</a></li>
+                <li><a href ng-click="action.attachVolume()" ng-show="action.isActionShow('attachVolume')">添加卷</a></li>
+                <li><a href ng-click="action.detachVolume()" ng-show="action.isActionShow('detachVolume')">分离卷</a></li>
+                <li><a href ng-click="action.attachL3Network()" ng-show="action.isActionShow('attachL3Network')">添加三层网络</a></li>
+                <li><a href ng-click="action.detachL3Network()" ng-show="action.isActionShow('detachL3Network')">分离三层网络</a></li>
+               <li><a href ng-click="action.changeInstanceOffering()" ng-show="action.isActionShow('changeInstanceOffering')">更改实例配置置</a></li>
                 <li class="divider"></li>
-                <li><a href style="color:red" ng-click="funcDeleteVmInstance(deleteVmInstance)">Delete</a></li>
+                <li><a href style="color:red" ng-click="funcDeleteVmInstance(deleteVmInstance)">删除</a></li>
             </ul>
         </div>
     </div>
 
     <div kendo-grid="vmInstanceGrid" k-options="oVmInstanceGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
-    <p class="z-hint">Single click column to show action button</p>
-    <p class="z-hint">Double click column to enter details page</p>
+    <p class="z-hint">单击列中对象显示操作按钮</p>
+    <p class="z-hint">双击列中对象进入虚拟机详情页面</p>
 </div>
