@@ -1,19 +1,19 @@
 <div kendo-window="winCreateVmInstance__" k-visible="false" k-options="winCreateVmInstanceOptions__">
     <div class="row">
         <div class="col-sm-15">
-            <div class="tab-content">
-                <div id="createVmInstanceInfo" class="tab-pane active">
+            <div class="tab-content" >
+                   <div id="createVmInstanceInfo" class="tab-pane active" >
                     <div class="alert alert-warning col-sm-21" ng-show="!infoPage.hasImage()">
-                        没有符合条件的镜像去创建虚拟机. 符合条件的镜像是带有使用状态为可用而且连接状态为准备。
+                        No image is eligible to create vm. Eligible images are ones with state 'Enabled' and status 'Ready'.
                     </div>
                     <div class="alert alert-warning col-sm-21" ng-show="!infoPage.hasInstanceOffering()">
-                        没有符合条件的虚拟机提供方案去创建虚拟机. 符合条件的虚拟机提供方案是带有使用状态为可用。
+                        No instance offering is eligible to create vm. Eligible instance offerings are ones with state 'Enabled'.
                     </div>
 
-                    <h4 class="z-win-h4">虚拟机信息</h4>
+                    <h4 class="z-win-h4">虚拟机创建信息</h4>
                     <form class="form">
                         <div class="form-group col-sm-24">
-                            <label for="instOffering">虚拟机提供方案</label>
+                            <label for="instOffering">配置模板</label>
                             <select id="instOffering" kendo-drop-down-list k-options="instanceOfferingOptions__" class="z-win-dropdown" ng-model="infoPage.instanceOfferingUuid"></select>
                         </div>
                         <div class="form-group col-sm-24">
@@ -23,64 +23,86 @@
                         <div ng-switch="infoPage.imageMediaType">
                             <div ng-switch-when="ISO">
                                 <div class="form-group col-sm-24">
-                                    <label for="rootDisk">根卷提供方案</label>
+                                    <label for="rootDisk">根卷磁盘模板</label>
                                     <select id="rootDisk" kendo-drop-down-list="rootDiskOfferingList__" k-options="rootDiskOfferingOptions__" class="z-win-dropdown" ng-model="infoPage.rootDiskOfferingUuid"></select>
-                                    <p class="z-hint">(要求) 选择磁盘方案创建根卷，以便用ISO镜像安装客户机操作系统。</p>
+                                    <p class="z-hint">(要求)选择磁盘创建根卷，以便客户机安装操作系统</p>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="name">名称</label>
-                            <input class="form-control z-win-input" type="text" id="name" placeholder="(要求) 不超过255个字符" ng-model="infoPage.name" required data-message="name is required">
+                            <label for="name">虚拟机名称</label>
+                            <input class="form-control z-win-input" type="text" id="name" placeholder="(Required) max length of 255 characters" ng-model="infoPage.name" required data-message="name is required">
                         </div>
-                        <div class="form-group col-sm-24">
-                            <label for="hostname">主机名称</label>
+                                         
+                       
+                          <div class="form-group col-sm-24">
+                            <label for="vmcount">虚拟机数量</label>
+                            <input class="form-control z-win-input" type="text" id="vmcount" placeholder="1" ng-model="infoPage.vmcount" required data-message="vmcount is required">
+                        </div>                        
+                      
+ 
+                     <!--   <div class="form-group col-sm-24">
+                            <label for="hostname">主机名</label>
                             <input class="form-control z-win-input" type="text" id="hostname" placeholder="(Optional) hostname on default L3 network" ng-model="infoPage.hostname">
-                            <p class="z-hint">虚拟机只有一个三层网络, 而且它是默认的三层网络</p>
-                        </div>
-                        <div class='form-group col-sm-24' style="height:1px; background-color:#cdcdcd;"></div>
+                            <p class="z-hint">对于虚拟机只有一个三层网络，这个三层网络是默认的三层网络</p>
+                        </div>  -->
+                     <!--   <div class='form-group col-sm-24' style="height:1px; background-color:#cdcdcd;"></div>  -->
+		    <!--      <div class="form-group col-sm-24"> 
+		              <label for="l3">三层网络</label> 
+                             <select id="l3" kendo-drop-down-list k-options="l3NetworkOptions__" class="z-win-dropdown" ng-model="infoPage.l3NetworkUuid"></select>
+                         </div> 2015-10-20 更改，复制到下方 -->
                         <div class="form-group col-sm-24">
-                            <label for="l3">三层网络</label>
-                            <select id="l3" kendo-drop-down-list k-options="l3NetworkOptions__" class="z-win-dropdown" ng-model="infoPage.l3NetworkUuid"></select>
-                        </div>
-                        <div class="form-group col-sm-24">
-                            <label for="l3_ip">静态 IP</label>
-                            <input class="form-control z-win-input" type="text" id="l3_ip" placeholder="(Optional)" ng-model="infoPage.l3NetworkIp">
+                          <!--  <label for="l3_ip">静态IP</label>  -->
+                            <input class="form-control z-win-input" type="hidden" id="l3_ip" placeholder="(Optional)" ng-model="infoPage.l3NetworkIp">
                             <div class="alert alert-danger col-sm-21" ng-show="!infoPage.isStaticIpValid()">
-                                不是一个有效的 IPv4 地址
+                                不是一个有效的IPv4地址
                             </div>
                         </div>
-                        <div class="form-group col-sm-24">
-                            <button type="button" class="btn btn-default" ng-click="infoPage.addL3Network()" ng-disabled="!infoPage.isStaticIpValid()">
-                                <i class="fa fa-plus" style="font-size: 1.2em"></i>
-                                <span>添加</span>
-                            </button>
-                            <span class="z-hint" ng-show="infoPage.l3NetworkUuids.length <= 0">请至少添加一个三层网络</span>
-                        </div>
-                        <div class="form-group col-sm-24">
+                     <!--   <div class="form-group col-sm-24">
                             <div kendo-grid k-options="l3NetworkGrid__"></div>
-                        </div>
+                        </div>  -->
                         <div class="form-group col-sm-24" ng-show="infoPage.l3NetworkUuids.length > 1">
                             <label for="dl3">默认三层网络</label>
                             <select id="dl3" kendo-drop-down-list="defaultL3NetworkList__" k-options="defaultL3NetworkOptions__" class="z-win-dropdown" ng-model="infoPage.defaultL3NetworkUuid"></select>
-                            <p class="z-hint">(要求) 选择一个三层网络，它对虚拟机提供了默认的路由和DNS </p>
+                            <p class="z-hint">(要求)选择一个给虚拟机提供默认路由和DNS服务的三层网络</p>
                         </div>
-                        <div class='form-group col-sm-24' style="height:1px; background-color:#cdcdcd;"></div>
-                        <div class="form-group col-sm-24">
-                            <label for="diskOffering">数据磁盘提供方案</label>
+                    <!--    <div class='form-group col-sm-24' style="height:1px; background-color:#cdcdcd;"></div>  -->
+                    <!--    <div class="form-group col-sm-24">
+                            <label for="diskOffering">数据磁盘模板</label>
                             <select id="diskOffering" kendo-multi-select="diskOfferingList__" k-options="diskOfferingOptions__" class="z-win-dropdown"></select>
-                            <p class="z-hint">(可选) 选择一个或更多的磁盘提供方案，它将被用来创建虚拟机的数据磁盘。</p>
-                        </div>
+                            <p class="z-hint">(可选)选择一个或更多的数据磁盘模板给创建虚拟机数据磁盘的时候使用</p>
+                        </div> 2015-10-20 更改，复制到下方 -->
                         <div class="form-group col-sm-24">
-                            <label for="description">描叙</label>
-                            <textarea  class="form-control z-win-input" rows="5" id="description" placeholder="(可选) 不超过2048个字符" ng-model="infoPage.description"></textarea>
-                        </div>
+                            <button type="button"  class="btn btn-primary"  ng-click=" infoPage.addL3Network();button.nextClick();button.nextClick()" ng-disabled="!infoPage.isStaticIpValid();">
+                            <!--    <i class="fa fa-plus" style="font-size: 1.2em"></i>    -->
+                                <span>创建</span>
+                        
+                            </button>
+                        <!--    <span class="z-hint" ng-show="infoPage.l3NetworkUuids.length <= 0">请添加至少一个三层网络</span> -->
+                        </div> 
+                   <!--     <div class="form-group col-sm-24">
+                            <label for="description">详情</label>
+                            <textarea  class="form-control z-win-input" rows="5" id="description" placeholder="(Optional) max length of 2048 characters" ng-model="infoPage.description"></textarea>
+                        </div>  -->
                     </form>
                 </div>
 
                 <div id="createVmInstanceLocation" class="tab-pane">
-                    <h4 class="z-win-h4">选择位置</h4>
+                    <h4 class="z-win-h4">选择路径</h4>
                     <form class="form">
+                        
+                        <div class="form-group col-sm-24">
+                              <label for="l3">三层网络</label>
+                             <select id="l3" kendo-drop-down-list k-options="l3NetworkOptions__" class="z-win-dropdown" ng-model="infoPage.l3NetworkUuid"></select>
+                         </div>
+                        <div class="form-group col-sm-24">
+                            <label for="diskOffering">数据磁盘模板</label>
+                            <select id="diskOffering" kendo-multi-select="diskOfferingList__" k-options="diskOfferingOptions__" class="z-win-dropdown"></select>
+                            <p class="z-hint">(可选)选择一个或更多的数据磁盘模板给创建虚拟机数据磁盘的时候使用</p>
+                        </div>
+
+
+
                         <div class="form-group col-sm-18">
                             <label for="zone">区域</label>
                             <select id="zone" kendo-combo-box k-options="zoneOptions__" k-placeholder="'Select Zone'" class="z-win-dropdown" k-ng-model="locationPage.zoneUuid"></select>
@@ -97,26 +119,24 @@
                         </div>
                     </form>
 
-                    <div class="col-sm-18" style="margin-bottom: 10px">
-                        <span class="z-hint">(可选) 指定位置创建虚拟机.如果没有指定位置, 
-目标主机将会通过分配策略自动分配，这个分配策略是在虚拟机提供方案中定义的。</span>
-                    </div>
+                 <!--   <div class="col-sm-18" style="margin-bottom: 10px">
+                        <span class="z-hint">(Optional) Specify location to create the vm. The precedence is host over cluster over zone. If no location is specified, a target host is automatically chosen by using allocator strategy defined in instance offering</span>
+                    </div> -->
 
                 </div>
 
-                <div class="form-group col-sm-18">
-                    <button type="button" class="btn btn-default" ng-click="button.previousClick()" ng-disabled="!button.canPreviousProceed()">上一步</button>
+            <!--    <div class="form-group col-sm-18">
+                    <button type="button" class="btn btn-default" ng-click="button.previousClick()" ng-disabled="!button.canPreviousProceed()">Previous</button>
                     <button type="button" class="btn btn-primary" ng-disabled="!button.canNextProceed()" ng-click="button.nextClick()">{{button.nextButtonName()}}</button>
-                </div>
+                </div> -->
             </div>
         </div>
-
-        <div class="col-sm-7 z-wizard-bar">
+     <!--   <div class="col-sm-7 z-wizard-bar">
             <ul class="nav">
-                <li class="active"><a data-target="#createVmInstanceInfo" ng-click="button.pageClick('createVmInstanceInfo')">虚拟机信息</a></li>
-                <li ng-class="{disabled: !psPage.isActive()}"><a data-target="#createVmInstanceLocation" ng-click="button.pageClick('createVmInstanceLocation')">位置</a></li>
+                <li class="active"><a data-target="#createVmInstanceInfo" ng-click="button.pageClick('createVmInstanceInfo')">虚拟机创建信息</a></li>
+                <li ng-class="{disabled: !psPage.isActive()}"><a data-target="#createVmInstanceLocation" ng-click="button.pageClick('createVmInstanceLocation')">路径</a></li>
             </ul>
-        </div>
+        </div>  -->
 
     </div>
 </div>

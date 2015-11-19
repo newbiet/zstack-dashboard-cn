@@ -29,11 +29,11 @@
                     操作 <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">启用</a></li>
-                    <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">禁用</a></li>
-                    <li><a href ng-click="action.attach()" ng-show="model.current.isAttachShow()">连接</a></li>
+                    <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
+                    <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
+                    <li><a href ng-click="action.attach()" ng-show="model.current.isAttachShow()">添加</a></li>
                     <li><a href ng-click="action.detach()" ng-show="model.current.isDetachShow()">分离</a></li>
-                    <li><a href ng-click="action.takeSnapshot()" ng-show="model.current.isSnapshotShow()">快照</a></li>
+                    <li><a href ng-click="action.takeSnapshot()" ng-show="model.current.isSnapshotShow()">产生快照</a></li>
                     <li><a href ng-click="action.createTemplate()" ng-show="model.current.isCreateTemplateShow()">创建模板</a></li>
                     <li class="divider"></li>
                     <li><a href style="color:red" ng-click="funcDeleteVolume(deleteVolume)" ng-show="model.current.isDeleteShow()">删除</a></li>
@@ -43,8 +43,8 @@
     </div>
 
     <ul class="nav nav-pills">
-        <li class="active"><a data-target="#info" data-toggle="pill" href>信息</a></li>
-        <li><a data-target="#snapshot" data-toggle="pill" href>快照</a></li>
+        <li class="active"><a data-target="#info" data-toggle="pill" href>Info</a></li>
+        <li><a data-target="#snapshot" data-toggle="pill" href>Snapshot</a></li>
     </ul>
 
 
@@ -66,11 +66,11 @@
                     <div class="panel-body">
                         <table class="table z-table-borderless">
                             <tr>
-                                <td><span class="z-label">描述:</span></td>
+                                <td><span class="z-label">描叙:</span></td>
                                 <td><span class="z-description">{{model.current.description}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">启用状态:</span></td>
+                                <td><span class="z-label">使用状态:</span></td>
                                 <td><span class="{{model.current.stateLabel()}}">{{model.current.state}}</span></td>
                             </tr>
                             <tr>
@@ -90,11 +90,11 @@
                                 <td><span>{{model.current.deviceId}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">空间大小:</span></td>
+                                <td><span class="z-label">大小:</span></td>
                                 <td><span>{{model.current.size | size}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">安装类型:</span></td>
+                                <td><span class="z-label">安装路径:</span></td>
                                 <td><span>{{model.current.installPath}}</span></td>
                             </tr>
                             <tr>
@@ -106,15 +106,15 @@
                                 <td><a href="/#/primaryStorage/{{model.current.primaryStorageUuid}}">{{model.current.primaryStorageUuid}}</a></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">VM实例 UUID:</span></td>
+                                <td><span class="z-label">虚拟机实例 UUID:</span></td>
                                 <td><a href="/#/vmInstance/{{model.current.vmInstanceUuid}}">{{model.current.vmInstanceUuid}}</a></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">ROOT镜像 UUID:</span></td>
+                                <td><span class="z-label">根镜像 UUID:</span></td>
                                 <td><a href="/#/image/{{model.current.rootImageUuid}}">{{model.current.rootImageUuid}}</a></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">硬盘 UUID:</span></td>
+                                <td><span class="z-label">磁盘模板 UUID:</span></td>
                                 <td><a href="/#/diskOffering/{{model.current.diskOfferingUuid}}">{{model.current.diskOfferingUuid}}</a></td>
                             </tr>
                             <tr>
@@ -122,7 +122,7 @@
                                 <td><span>{{model.current.createDate}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">最近更新日期:</span></td>
+                                <td><span class="z-label">最后更改日期:</span></td>
                                 <td><span>{{model.current.lastOpDate}}</span></td>
                             </tr>
                         </table>

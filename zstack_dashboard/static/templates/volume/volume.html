@@ -34,14 +34,14 @@
         <div id="volumeFilterContent" style="display: none">
             <form class="form">
                 <div class="form-group">
-                    <label for="fieldList" class="z-block-label">过滤</label>
+                    <label for="fieldList" class="z-block-label">FILTER BY</label>
                     <select id="fieldList" kendo-drop-down-list k-options="filterBy.fieldList" ng-model="filterBy.field"></select>
                 </div>
                 <div class="form-group">
-                    <label class="z-block-label" for="valueList">值</label>
+                    <label class="z-block-label" for="valueList">VALUE</label>
                     <select kendo-drop-down-list id="valueList" ng-disabled="filterBy.isValueListDisabled()" k-options="filterBy.valueList" ng-model="filterBy.value"></select>
                 </div>
-                <button type="button" class="btn btn-sm btn-primary" ng-click="filterBy.confirm(popoverFilterBy)">确认</button>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="filterBy.confirm(popoverFilterBy)">Confirm</button>
             </form>
         </div>
 
@@ -50,19 +50,19 @@
                 操作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()"> 启用</a></li>
-                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()"> 禁用</a></li>
-                <li><a href ng-click="action.attach()" ng-show="model.current.isAttachShow()"> 附加</a></li>
-                <li><a href ng-click="action.detach()" ng-show="model.current.isDetachShow()"> 分离</a></li>
-                <li><a href ng-click="action.createTemplate()" ng-show="model.current.isCreateTemplateShow()"> 创建模板</a></li>
-                <li><a href ng-click="action.takeSnapshot()" ng-show="model.current.isSnapshotShow()"> 快照</a></li>
+                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
+                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
+                <li><a href ng-click="action.attach()" ng-show="model.current.isAttachShow()">添加</a></li>
+                <li><a href ng-click="action.detach()" ng-show="model.current.isDetachShow()">分离</a></li>
+                <li><a href ng-click="action.createTemplate()" ng-show="model.current.isCreateTemplateShow()">创建模板</a></li>
+                <li><a href ng-click="action.takeSnapshot()" ng-show="model.current.isSnapshotShow()">生成快照</a></li>
                 <li class="divider"></li>
-                <li><a href style="color:red" ng-click="funcDeleteVolume(deleteVolume)" ng-show="model.current.isDeleteShow()"> 删除</a></li>
+                <li><a href style="color:red" ng-click="funcDeleteVolume(deleteVolume)" ng-show="model.current.isDeleteShow()">删除</a></li>
             </ul>
         </div>
     </div>
 
     <div kendo-grid="volumeGrid" k-options="oVolumeGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
     <p class="z-hint">单击列中对象显示操作按钮</p>
-    <p class="z-hint">双击列中对象进入虚拟机详情页面/p>
+    <p class="z-hint">双击列中对象进入详情页面</p>
 </div>

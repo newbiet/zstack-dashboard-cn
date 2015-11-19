@@ -7,51 +7,51 @@
                         No backup storage has been added. Please go to <a href="/#/backupStorage">backup storage page</a> to add a new one.
                     </div>
 
-                    <h4 class="z-win-h4">添加镜像</h4>
+                    <h4 class="z-win-h4">ADD IMAGE</h4>
                     <form class="form" id="formCreate">
                         <div class="form-group col-sm-24">
-                            <label for="zone">备份存储</label>
+                            <label for="zone">BACKUP STORAGE</label>
                             <select id="zone" kendo-multi-select="backupStorageList__" k-options="backupStorageListOptions__" class="z-win-dropdown"></select>
-                            <p class="z-hint">（必选）选择备份存储该镜像的存储</p>
+                            <p class="z-hint">(Required) select backup storage where the image is being stored</p>
                         </div>
                         <div class="form-group col-sm-21">
-                            <label for="name">名称</label>
+                            <label for="name">NAME</label>
                             <input class="form-control" type="text" id="name" placeholder="(Required) max length of 255 characters" ng-model="infoPage.name" required data-message="name is required">
                         </div>
                         <div class="form-group col-sm-21">
-                            <label for="description">描述</label>
+                            <label for="description">DESCRIPTION</label>
                             <textarea  class="form-control" rows="5" id="description" placeholder="(Optional) max length of 2048 characters" ng-model="infoPage.description"></textarea>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="hvType">格式</label>
+                            <label for="hvType">FORMAT</label>
                             <select id="hvType" kendo-drop-down-list="formatList__" k-options="formatOptions__" class="z-win-dropdown" ng-model="infoPage.format"></select>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="format">媒体类型</label>
+                            <label for="format">MEDIA TYPE</label>
                             <select id="format" kendo-drop-down-list="mediaTypeList__" k-options="mediaTypeOptions__" class="z-win-dropdown" ng-model="infoPage.mediaType"></select>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="platform">平台</label>
+                            <label for="platform">PLATFORM</label>
                             <select id="platform" kendo-drop-down-list="platformList__" k-options="platformOptions__" class="z-win-dropdown" ng-model="infoPage.platform"></select>
                         </div>
                         <div class="form-group col-sm-21">
-                            <label for="url">网址</label>
+                            <label for="url">URL</label>
                             <input type="text" class="form-control" id="url" placeholder="http or https link" ng-model="infoPage.url">
                             <div class="alert alert-danger col-sm-21" ng-show="!infoPage.isUrlValid()">
                                 Not a valid URL. Valid URL must start with 'http' or 'https'
                             </div>
                         </div>
                         <div class="form-group col-sm-21">
-                            <label for="guestOsType">客户操作系统类型</label>
+                            <label for="guestOsType">GUEST OS TYPE</label>
                             <input type="text" class="form-control" id="guestOsType" placeholder="Guest OS type" ng-model="infoPage.guestOsType">
                         </div>
                         <div class="form-group col-sm-18">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" ng-model="infoPage.system"> <strong>系统镜像</strong>
+                                    <input type="checkbox" ng-model="infoPage.system"> <strong>SYSTEM IMAGE</strong>
                                 </label>
                             </div>
-                            <p class="z-hint">（可选）如果选中，镜像将被创建为系统镜像。系统镜像不能用于创建用户虚拟机;它主要用于创建虚拟路由器</p>
+                            <p class="z-hint">(Optional) if checked, the image will be created as system image. A system image cannot be used to create user vm;it's mainly for creating virtual router</p>
                         </div>
                     </form>
                 </div>
@@ -65,7 +65,7 @@
         <div class="col-sm-7">
             <div class="z-wizard-bar">
                 <ul class="nav">
-                    <li class="active"><a data-target="#createImageInfo" ng-click="button.pageClick('createImageInfo')">镜像信息</a></li>
+                    <li class="active"><a data-target="#createImageInfo" ng-click="button.pageClick('createImageInfo')">IMAGE INFO</a></li>
                 </ul>
             </div>
         </div>

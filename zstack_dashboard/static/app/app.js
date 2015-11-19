@@ -8790,13 +8790,13 @@ var MZone;
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/primaryStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描叙',
                         width: '15%'
                     },
                     {
@@ -8806,22 +8806,22 @@ var MZone;
                     },
                     {
                         field: 'totalCapacity',
-                        title: 'TOTAL CAPACITY',
+                        title: '总容量',
                         width: '8%'
                     },
                     {
                         field: 'availableCapacity',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用容量',
                         width: '8%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '10%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '使用状态',
                         width: '15%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
@@ -8879,23 +8879,23 @@ var MZone;
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/l2Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '25%'
                     },
                     {
                         field: 'physicalInterface',
-                        title: 'PHYSICAL INTERFACE',
+                        title: '物理接口',
                         width: '25%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
@@ -8975,34 +8975,34 @@ var MZone;
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/backupStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'totalCapacity',
-                        title: 'TOTAL CAPACITY',
+                        title: '总容量',
                         width: '10%'
                     },
                     {
                         field: 'availableCapacity',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用容量',
                         width: '10%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '10%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '使用状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
                     {
                         field: 'status',
-                        title: 'STATUS',
+                        title: '连接状态',
                         width: '20%',
                         template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                     },
@@ -9274,18 +9274,18 @@ var MZone;
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '20%',
                         template: '<span><div class="{{dataItem.gridColumnLabel()}}"></div><i class="fa fa-spinner fa-spin" ng-show="dataItem.isInProgress()"></i><a href="/\\#/zone/{{dataItem.uuid}}"><span>#: name #</span></a></span>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '30%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
@@ -9629,23 +9629,23 @@ var MCluster;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '15%',
                     template: '<a href="/\\#/cluster/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '25%'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '管理程序',
                     width: '15%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '15%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -9979,23 +9979,23 @@ var MCluster;
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/l2Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '25%'
                     },
                     {
                         field: 'physicalInterface',
-                        title: 'PHYSICAL INTERFACE',
+                        title: '物理接口',
                         width: '25%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
@@ -10056,13 +10056,13 @@ var MCluster;
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/primaryStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描叙',
                         width: '15%'
                     },
                     {
@@ -10072,22 +10072,22 @@ var MCluster;
                     },
                     {
                         field: 'totalCapacity',
-                        title: 'TOTAL CAPACITY',
+                        title: '总容量',
                         width: '8%'
                     },
                     {
                         field: 'availableCapacity',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用容量',
                         width: '8%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '10%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '状态',
                         width: '15%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
@@ -11319,13 +11319,13 @@ var MPrimaryStorage;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/primaryStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描叙',
                     width: '10%'
                 },
                 {
@@ -11335,30 +11335,30 @@ var MPrimaryStorage;
                 },
                 {
                     field: 'totalCapacity',
-                    title: 'TOTAL CAPACITY',
+                    title: '总容量',
                     width: '8%',
                     template: '<span>{{dataItem.totalCapacity | size}}</span>'
                 },
                 {
                     field: 'availableCapacity',
-                    title: 'AVAILABLE CAPACITY',
+                    title: '可用容量',
                     width: '8%',
                     template: '<span>{{dataItem.availableCapacity | size}}</span>'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '10%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '使用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATE',
+                    title: '连接状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
@@ -12560,23 +12560,23 @@ var ML2Network;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/l2Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '25%'
                 },
                 {
                     field: 'physicalInterface',
-                    title: 'PHYSICAL INTERFACE',
+                    title: '物理接口',
                     width: '25%'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '20%'
                 },
                 {
@@ -13831,29 +13831,29 @@ var ML3Network;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '15%',
                     template: '<a href="/\\#/l3Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描叙',
                     width: '20%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '15%'
                 },
                 {
                     field: 'system',
-                    title: 'SYSTEM NETWORK',
+                    title: '系统网络',
                     width: '15%',
                     template: '<span class="{{dataItem.systemLabel()}}">{{dataItem.system ? "TRUE" : "" }}</span>'
                 },
@@ -15739,13 +15739,13 @@ var MBackupStorage;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/backupStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描叙',
                     width: '10%'
                 },
                 {
@@ -15755,30 +15755,30 @@ var MBackupStorage;
                 },
                 {
                     field: 'totalCapacity',
-                    title: 'TOTAL CAPACITY',
+                    title: '总容量',
                     width: '8%',
                     template: '<span>{{dataItem.totalCapacity | size}}</span>'
                 },
                 {
                     field: 'availableCapacity',
-                    title: 'AVAILABLE CAPACITY',
+                    title: '可用容量',
                     width: '8%',
                     template: '<span>{{dataItem.availableCapacity | size}}</span>'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '10%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '使用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '连接状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
@@ -16993,34 +16993,34 @@ var MHost;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/host/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'managementIp',
-                    title: 'MANAGEMENT IP',
+                    title: '管理节点 IP',
                     width: '15%'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '管理程序',
                     width: '15%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '运行状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '连接状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
@@ -17841,41 +17841,41 @@ var MImage;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/image/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'mediaType',
-                    title: 'MEIDA TYPE',
+                    title: '模板类型',
                     width: '15%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '使用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '可用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
                 {
                     field: 'guestOsType',
-                    title: 'GUEST OS',
+                    title: '客户端系统',
                     width: '15%'
                 },
                 {
                     field: 'size',
-                    title: 'SIZE',
+                    title: '大小',
                     width: '10%',
                     template: '<span>{{dataItem.size | size}}</span>'
                 },
                 {
                     field: 'format',
-                    title: 'FORMAT',
+                    title: '格式',
                     width: '10%'
                 },
                 {
@@ -18784,34 +18784,34 @@ var MInstanceOffering;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/instanceOffering/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'cpuNum',
-                    title: 'CPU NUMBER',
+                    title: 'CPU 核数',
                     width: '10%'
                 },
                 {
                     field: 'cpuSpeed',
-                    title: 'CPU SPEED',
+                    title: 'CPU 频率',
                     width: '10%'
                 },
                 {
                     field: 'memorySize',
-                    title: 'MEMORY',
+                    title: '内存',
                     width: '15%',
                     template: '<span>{{dataItem.memorySize | size}}</span>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '15%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -19514,24 +19514,24 @@ var MDiskOffering;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%',
                     template: '<a href="/\\#/diskOffering/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'diskSize',
-                    title: 'DISK SIZE',
+                    title: '磁盘大小',
                     width: '20%',
                     template: '<span>{{dataItem.diskSize | size}}</span>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '20%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -20113,18 +20113,18 @@ var MApiDetails;
                 columns: [
                     {
                         field: 'success',
-                        title: 'SUCCESS',
+                        title: '成功',
                         width: '10%',
                         template: '<span class="label #= success ? \"label-success\" : \"label-danger\" #">#= success ? \"SUCCESS\" : \"FAILURE\" #</span>'
                     },
                     {
                         field: 'requestText',
-                        title: 'REQUEST',
+                        title: '请求',
                         width: '45%'
                     },
                     {
                         field: 'rspText',
-                        title: 'RESPONSE',
+                        title: '响应',
                         width: '45%'
                     }
                 ],
@@ -20280,9 +20280,17 @@ var MVmInstance;
         };
 
         VmInstanceManager.prototype.create = function (vm, done) {
+            var n = 0;
             var _this = this;
+            var mynum = 1;
+            if(vm.vmcount > mynum)
+            mynum = vm.vmcount;
+         //   var msg = new ApiHeader.APICreateVmInstanceMsg();
+            for(n = 1; n <= mynum; n++){
+         //   var _this = this;
+            var myn = n;
             var msg = new ApiHeader.APICreateVmInstanceMsg();
-            msg.name = vm.name;
+            msg.name = vm.name + "-" + myn.toString();
             msg.description = vm.description;
             msg.instanceOfferingUuid = vm.instanceOfferingUuid;
             msg.imageUuid = vm.imageUuid;
@@ -20292,7 +20300,7 @@ var MVmInstance;
             msg.zoneUuid = vm.zoneUuid;
             msg.clusterUuid = vm.clusterUuid;
             msg.hostUuid = vm.hostUuid;
-            msg.resourceUuid = vm.resourceUuid;
+        //    msg.resourceUuid = vm.resourceUuid;
             msg.defaultL3NetworkUuid = vm.defaultL3NetworkUuid;
             msg.systemTags = [];
             for (var i = 0; i < vm.l3NetworkStaticIps.length; ++i) {
@@ -20310,6 +20318,7 @@ var MVmInstance;
                     link: Utils.sprintf('/#/vm/{0}', c.uuid)
                 });
             });
+          }       
         };
 
         VmInstanceManager.prototype.getConsole = function (vm, done) {
@@ -20576,30 +20585,30 @@ var MVmInstance;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%',
                     template: '<a href="/\\#/vmInstance/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'defaultIp',
-                    title: 'DEFAULT IP',
+                    title: '默认IP',
                     width: '20%',
                     template: '{{dataItem.defaultIp}}'
                 },
                 {
                     field: 'hostIp',
-                    title: 'HOST IP',
+                    title: '主机IP',
                     width: '20%',
                     template: '<a href="/\\#/host/{{dataItem.hostUuid}}">{{dataItem.managementIp}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '20%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -21686,7 +21695,7 @@ var MVmInstance;
                 };
 
                 $scope.winCreateVmInstanceOptions__ = {
-                    width: '700px',
+                    width: '500px',
                     //height: '620px',
                     animation: false,
                     modal: true,
@@ -21714,7 +21723,8 @@ var MVmInstance;
                     dataSource: new kendo.data.DataSource({ data: [] }),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    template: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' + '<div style="color: black"><span class="z-label">CPU Number:</span><span>#: cpuNum #</span></div>' + '<div style="color: black"><span class="z-label">CPU Speed:</span><span>#: cpuSpeed #</span></div>' + '<div style="color: black"><span class="z-label">Memory:</span><span>#: memorySize #</span></div>' + '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>'
+                    template: '<div style="color: black"><span class="z-label"></span><span>#: name #</span></div>' /*  + '<div style="color: black"><span class="z-label">CPU 数量:</span><span>#: cpuNum #</span></div>' + '<div style="color: black"><span class="z-label">CPU 频率:</span><span>#: cpuSpeed #</span></div>' + '<div style="color: black"><span class="z-label">内存:</span><span>#: memorySize #</span></div>' + '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' */
+                 /*   template: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' + '<div style="color: black"><span class="z-label">CPU 数量:</span><span>#: cpuNum #</span></div>' + '<div style="color: black"><span class="z-label">CPU 频率:</span><span>#: cpuSpeed #</span></div>' + '<div style="color: black"><span class="z-label">内存:</span><span>#: memorySize #</span></div>' + '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' */
                 };
 
                 $scope.diskOfferingOptions__ = {
@@ -21758,7 +21768,8 @@ var MVmInstance;
                     dataSource: new kendo.data.DataSource({ data: [] }),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    template: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' + '<div style="color: black"><span class="z-label">Platform:</span><span>#: platform #</span></div>' + '<div style="color: black"><span class="z-label">Media Type:</span><span>#= mediaType #</span></div>' + '<div style="color: black"><span class="z-label">Format:</span><span>#: format #</span></div>' + '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>'
+                    template: '<div style="color: black"><span class="z-label"></span><span>#: name #</span></div>' /* + '<div style="color: black"><span class="z-label">Platform:</span><span>#: platform #</span></div>' + '<div style="color: black"><span class="z-label">Media Type:</span><span>#= mediaType #</span></div>' + '<div style="color: black"><span class="z-label">Format:</span><span>#: format #</span></div>' + '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' */
+                /*    template: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' + '<div style="color: black"><span class="z-label">Platform:</span><span>#: platform #</span></div>' + '<div style="color: black"><span class="z-label">Media Type:</span><span>#= mediaType #</span></div>' + '<div style="color: black"><span class="z-label">Format:</span><span>#: format #</span></div>' + '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>'  */
                 };
 
                 _this.$scope = $scope;
@@ -22771,35 +22782,35 @@ var MVolume;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/volume/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '虚拟机监视器',
                     width: '10%'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '10%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '使用状态',
                     width: '15%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '状态',
                     width: '15%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
                 {
                     field: 'vmInstanceUuid',
-                    title: 'VM INSTANCE UUID',
+                    title: '虚拟机实例 UUID',
                     width: '20%',
                     template: '<a href="/\\#/vmInstance/{{dataItem.vmInstanceUuid}}">{{dataItem.vmInstanceUuid}}</a>'
                 },
@@ -24903,18 +24914,18 @@ var MSecurityGroup;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '25%',
                     template: '<a href="/\\#/securityGroup/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描叙',
                     width: '25%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '25%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -26882,13 +26893,13 @@ var MVip;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/vip/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '6%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -26899,28 +26910,28 @@ var MVip;
                 },
                 {
                     field: 'netmask',
-                    title: 'NETMASK',
+                    title: '子网掩码',
                     width: '14%'
                 },
                 {
                     field: 'gateway',
-                    title: 'GATEWAY',
+                    title: '网关',
                     width: '14%'
                 },
                 {
                     field: 'l3NetworkUuid',
-                    title: 'L3 NETWORK UUID',
+                    title: '三层网络UUID',
                     width: '%14',
                     template: '<a href="/\\#/l3Network/{{dataItem.l3NetworkUuid}}">{{dataItem.l3NetworkUuid}}</a>'
                 },
                 {
                     field: 'useFor',
-                    title: 'USE',
+                    title: '使用',
                     width: '14%'
                 },
                 {
                     field: 'serviceProvider',
-                    title: 'SERVICE PROVIDER',
+                    title: '服务提供者',
                     width: '14%'
                 }
             ];
@@ -27699,24 +27710,24 @@ var MEip;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '25%',
                     template: '<a href="/\\#/eip/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '25%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'vipIp',
-                    title: 'VIP IP',
+                    title: '弹性IP',
                     width: '25%'
                 },
                 {
                     field: 'vmNicIp',
-                    title: 'VM NIC IP',
+                    title: '虚拟机 NIC IP',
                     width: '25%'
                 }
             ];
@@ -29110,44 +29121,44 @@ var MPortForwarding;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/pf/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'vipPortStart',
-                    title: 'VIP PORT START',
+                    title: '虚拟IP端口开始',
                     width: '10%'
                 },
                 {
                     field: 'vipPortEnd',
-                    title: 'VIP PORT END',
+                    title: '虚拟IP端口结束',
                     width: '10%'
                 },
                 {
                     field: 'privatePortStart',
-                    title: 'GUEST PORT START',
+                    title: '主机端口开始',
                     width: '10%'
                 },
                 {
                     field: 'privatePortEnd',
-                    title: 'GUEST PORT END',
+                    title: '主机端口结束',
                     width: '10%'
                 },
                 {
                     field: 'vipIp',
-                    title: 'VIP IP',
+                    title: '虚拟IP',
                     width: '20%'
                 },
                 {
                     field: 'vmNicIp',
-                    title: 'VM NIC IP',
+                    title: '虚拟机 NIC IP',
                     width: '20%'
                 }
             ];
@@ -30683,29 +30694,29 @@ var MVirtualRouter;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%',
                     template: '<a href="/\\#/vmInstance/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '管理程序',
                     width: '20%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '运行状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '连接状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
@@ -31468,40 +31479,40 @@ var MVirtualRouterOffering;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/virtualRouterOffering/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '名称',
                     width: '15%'
                 },
                 {
                     field: 'cpuNum',
-                    title: 'CPU NUMBER',
+                    title: 'CPU 核数',
                     width: '10%'
                 },
                 {
                     field: 'cpuSpeed',
-                    title: 'CPU SPEED',
+                    title: 'CPU 频率',
                     width: '10%'
                 },
                 {
                     field: 'memorySize',
-                    title: 'MEMORY',
+                    title: '内存',
                     width: '15%',
                     template: '<span>{{dataItem.memorySize | size}}</span>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'isDefault',
-                    title: 'DEFAULT OFFERING',
+                    title: '默认模板',
                     width: '10%',
                     template: '<span class="{{dataItem.isDefaultLabel()}}">{{dataItem.isDefault ? "TRUE" : "" }}</span>'
                 },
@@ -32203,31 +32214,31 @@ var MDashboard;
             this.$location = $location;
             this.zoneMgr = zoneMgr;
             var cpu = new kendo.data.ObservableObject({
-                name: 'CPU',
+                name: '处理器',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var memory = new kendo.data.ObservableObject({
-                name: 'MEMORY',
+                name: '内存',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var priCap = new kendo.data.ObservableObject({
-                name: 'PRIMARY STORAGE',
+                name: '主存储',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var backupCap = new kendo.data.ObservableObject({
-                name: 'BACKUP STORAGE',
+                name: '备份存储',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var ip = new kendo.data.ObservableObject({
-                name: 'IP ADDRESS',
+                name: 'IP地址',
                 total: 0,
                 available: 0,
                 percent: 0
@@ -32240,22 +32251,22 @@ var MDashboard;
                 columns: [
                     {
                         field: 'name',
-                        title: 'CAPACITY NAME',
+                        title: '属性名称',
                         width: '25%'
                     },
                     {
                         field: 'total',
-                        title: 'TOTAL CAPACITY',
+                        title: '总量',
                         width: '25%'
                     },
                     {
                         field: 'available',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用量',
                         width: '25%'
                     },
                     {
                         field: 'percent',
-                        title: 'AVAILABLE PERCENTAGE',
+                        title: '可用比例',
                         width: '25%'
                     }
                 ],
@@ -32317,87 +32328,87 @@ var MDashboard;
             };
 
             var vm = new kendo.data.ObservableObject({
-                name: 'VM INSTANCE',
+                name: '虚拟机实例',
                 link: 'vmInstance',
                 amount: 0
             });
             var volume = new kendo.data.ObservableObject({
-                name: 'VOLUME',
+                name: '卷',
                 link: 'volume',
                 amount: 0
             });
             var securityGroup = new kendo.data.ObservableObject({
-                name: 'SECURITY GROUP',
+                name: '安全组',
                 link: 'securityGroup',
                 amount: 0
             });
             var eip = new kendo.data.ObservableObject({
-                name: 'EIP',
+                name: '弹性IP',
                 link: 'eip',
                 amount: 0
             });
             var portForwarding = new kendo.data.ObservableObject({
-                name: 'PORT FORWARDING',
+                name: '端口转发',
                 link: 'portForwarding',
                 amount: 0
             });
             var zone = new kendo.data.ObservableObject({
-                name: 'ZONE',
+                name: '域',
                 link: 'zone',
                 amount: 0
             });
             var cluster = new kendo.data.ObservableObject({
-                name: 'CLUSTER',
+                name: '集群',
                 link: 'cluster',
                 amount: 0
             });
             var host = new kendo.data.ObservableObject({
-                name: 'HOST',
+                name: '主机',
                 link: 'host',
                 amount: 0
             });
             var primaryStorage = new kendo.data.ObservableObject({
-                name: 'PRIMARY STORAGE',
+                name: '主存储',
                 link: 'primaryStorage',
                 amount: 0
             });
             var backupStorage = new kendo.data.ObservableObject({
-                name: 'BACKUP STORAGE',
+                name: '备份存储',
                 link: 'backupStorage',
                 amount: 0
             });
             var l2Network = new kendo.data.ObservableObject({
-                name: 'L2 NETWORK',
+                name: '二层网络',
                 link: 'l2Network',
                 amount: 0
             });
             var l3Network = new kendo.data.ObservableObject({
-                name: 'L3 NETWORK',
+                name: '三层网络',
                 link: 'l3Network',
                 amount: 0
             });
             var instanceOffering = new kendo.data.ObservableObject({
-                name: 'INSTANCE OFFERING',
+                name: '配置模板',
                 link: 'instanceOffering',
                 amount: 0
             });
             var diskOffering = new kendo.data.ObservableObject({
-                name: 'DISK OFFERING',
+                name: '磁盘模板',
                 link: 'diskOffering',
                 amount: 0
             });
             var vrOffering = new kendo.data.ObservableObject({
-                name: 'VIRTUAL ROUTER OFFERING',
+                name: '虚拟路由模板',
                 link: 'virtualRouterOffering',
                 amount: 0
             });
             var image = new kendo.data.ObservableObject({
-                name: 'IMAGE',
+                name: '镜像',
                 link: 'image',
                 amount: 0
             });
             var virtualRouter = new kendo.data.ObservableObject({
-                name: 'VIRTUAL ROUTER',
+                name: '虚拟路由',
                 link: 'virtualRouter',
                 amount: 0
             });
@@ -32409,13 +32420,13 @@ var MDashboard;
                 columns: [
                     {
                         field: 'name',
-                        title: 'RESOURCE NAME',
+                        title: '资源名称',
                         template: '<a href="/\\#/{{dataItem.link}}">{{dataItem.name}}</a>',
                         width: '50%'
                     },
                     {
                         field: 'amount',
-                        title: 'COUNT',
+                        title: '统计:',
                         width: '50%'
                     }
                 ],
@@ -32684,22 +32695,22 @@ var MGlobalConfig;
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%'
                 },
                 {
                     field: 'category',
-                    title: 'CATEGORY',
+                    title: '类别',
                     width: '20%'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '40%'
                 },
                 {
                     field: 'value',
-                    title: 'VALUE',
+                    title: '值',
                     width: '20%'
                 }
             ];
