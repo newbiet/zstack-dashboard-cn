@@ -4,7 +4,7 @@
             <div class="tab-content">
                 <div id="createClusterInfo" class="tab-pane active">
                     <div class="alert alert-warning col-sm-21" ng-show="!infoPage.hasZone()">
-                        No zone has been created. Please go to <a href="/#/zone">zone page</a> to create a new zone.
+                        没有创建的区域. 请到 <a href="/#/zone">区域页面</a> 去创建新的区域.
                     </div>
 
                     <h4 class="z-win-h4"><!--CLUSTER INFO-->集群信息</h4>
@@ -12,7 +12,7 @@
                         <div class="form-group col-sm-24">
                             <label for="zone"><!--ZONE-->域</label>
                             <select id="zone" kendo-drop-down-list k-options="zoneList" class="z-win-dropdown" ng-model="infoPage.zoneUuid"></select>
-                            <p class="z-hint">(Required) select zone where the cluster is being created</p>
+                            <p class="z-hint">(要求) 选择创建集群所在的区域</p>
                         </div>
                         <div class="form-group col-sm-24">
                             <label for="name"><!--NAME-->名称</label>
@@ -25,43 +25,43 @@
                         <div class="form-group col-sm-24">
                             <label for="hypervisor"><!--HYPERVISOR-->管理程序</label>
                             <select id="hypervisor" kendo-drop-down-list k-options="hypervisorList" class="z-win-dropdown" ng-model="infoPage.hypervisorType"></select>
-                            <p class="z-hint">(Required) select hypervisor type of host which this cluster will contain</p>
+                            <p class="z-hint">(要求) 选择这个集群将包含的虚拟机监视器</p>
                         </div>
                     </form>
                 </div>
 
                 <div id="createClusterPrimaryStorage" class="tab-pane">
                     <div class="alert alert-warning col-sm-21" ng-show="!psPage.hasPrimaryStorage()">
-                        No primary storage is eligible to attach. Please click 'Next' button to proceed.
+                        没有符合条件的二层网络添加. 请点击下一步按钮进行.
                     </div>
 
-                    <h4 class="z-win-h4">ATTACH PRIMARY STORAGE</h4>
+                    <h4 class="z-win-h4">添加主存储</h4>
                     <form class="form">
                         <div class="form-group col-sm-18">
-                            <label for="ps">PRIMARY STORAGE</label>
+                            <label for="ps">主存储</label>
                             <select id="ps" kendo-multi-select="primaryStorageList__" k-options="primaryStorageListOptions__" class="z-win-dropdown" k-ng-model="psPage.primaryStorageUuids"></select>
-                            <p class="z-hint">(Optional) select one or more primary storage to attach. Or do it later after creating cluster</p>
+                            <p class="z-hint">(可选) 选择添加一个或更多的主存储. 或者在创建集群之后再添加</p>
                         </div>
                     </form>
                 </div>
 
                 <div id="createClusterL2Network" class="tab-pane">
                     <div class="alert alert-warning col-sm-21" ng-show="!l2Page.hasL2Network()">
-                        No L2 network is eligible to attach. Please click 'Create' button to proceed.
+                        没有符合条件二层网络可以添加. 请点击创建按钮进行.
                     </div>
 
-                    <h4 class="z-win-h4">ATTACH L2 NETWORK</h4>
+                    <h4 class="z-win-h4">添加二层网络</h4>
                     <form class="form">
                         <div class="form-group col-sm-18">
-                            <label for="l2">L2 NETWORK</label>
+                            <label for="l2">二层网络</label>
                             <select id="l2" kendo-multi-select="l2NetworkList__" k-options="l2NetworkListOptions__" class="z-win-dropdown"></select>
-                            <p class="z-hint">(Optional) select one or more l2 network to attach. Or do it later after creating cluster</p>
+                            <p class="z-hint">(可选) 选择添加一个或更多二层网络. 或者在创建集群之后再去添加</p>
                         </div>
                     </form>
                 </div>
 
                 <div class="form-group col-sm-18">
-                    <button type="button" class="btn btn-default" ng-click="button.previousClick()" ng-disabled="!button.canPreviousProceed()">Previous</button>
+                    <button type="button" class="btn btn-default" ng-click="button.previousClick()" ng-disabled="!button.canPreviousProceed()">上一步</button>
                     <button type="button" class="btn btn-primary" ng-disabled="!button.canNextProceed()" ng-click="button.nextClick()">{{button.nextButtonName()}}</button>
                 </div>
             </div>
@@ -69,9 +69,9 @@
 
         <div class="col-sm-7 z-wizard-bar">
             <ul class="nav">
-                <li class="active"><a data-target="#createClusterInfo" ng-click="button.pageClick('createClusterInfo')">CLUSTER INFO</a></li>
-                <li ng-class="{disabled: !psPage.isActive()}"><a data-target="#createClusterPrimaryStorage" ng-click="button.pageClick('createClusterPrimaryStorage')">ATTACH PRIMARY STORAGE</a></li>
-                <li ng-class="{disabled: !l2Page.isActive()}"><a data-target="#createClusterL2Network" ng-click="button.pageClick('createClusterL2Network')">ATTACH L2 NETWORK</a></li>
+                <li class="active"><a data-target="#createClusterInfo" ng-click="button.pageClick('createClusterInfo')">集群信息</a></li>
+                <li ng-class="{disabled: !psPage.isActive()}"><a data-target="#createClusterPrimaryStorage" ng-click="button.pageClick('createClusterPrimaryStorage')">添加主存储</a></li>
+                <li ng-class="{disabled: !l2Page.isActive()}"><a data-target="#createClusterL2Network" ng-click="button.pageClick('createClusterL2Network')">添加二层网络</a></li>
             </ul>
         </div>
 

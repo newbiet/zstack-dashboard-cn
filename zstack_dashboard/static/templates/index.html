@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="root">
 <head>
-    <title>武汉工科智慧</title>
+    <title>zstack-ui</title>
     <link href="{{ url_for('static', filename='css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/kendo/kendo.common.min.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/kendo/kendo.common-bootstrap.min.css') }}" rel="stylesheet" />
@@ -39,8 +39,8 @@
         <p>One fine body&hellip;</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存更改</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -65,15 +65,17 @@
         #}#
     </div>
 </script>
+
 <span kendo-notification="apiNotification" k-options="optionsNotification"></span>
 <div ng-include="'/static/templates/zone/templates.html'"></div>
 
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header" ng-controller="MNav.Controller">
         <a class="navbar-brand" href="#">
-            <span>&nbsp; 武汉工科智慧 <img ng-show="funcIsProcessing()" src="static/img/ajax-loader.gif" width="17px" height="17px"> <span ng-show="funcIsProcessing()">{{ funcPendingRequestNum() }} requests in processing ...</span></span>
+            <span>&nbsp; ZStack <img ng-show="funcIsProcessing()" src="static/img/ajax-loader.gif" width="17px" height="17px"> <span ng-show="funcIsProcessing()">{{ funcPendingRequestNum() }} requests in processing ...</span></span>
         </a>
     </div>
+
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li>
@@ -113,66 +115,47 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-<!--
                         <h4 class="panel-title" data-toggle="collapse" data-target="#compute">
--->
-                          <!--  Compute
-                          -->
-<!--                       计算
+                            虚拟机
                         </h4>
--->
-<!--此处添加类容 --> 
-
-<h4 class="panel-title">
-  <a data-toggle="collapse" data-target="#image" href="/#/vmInstance">
-     虚拟机
-</a>
-</h4>
-   
-
                     </div>
-<!--                    <div id="compute" class="panel-collapse collapse in">
+                    <div id="compute" class="panel-collapse collapse in">
                         <div class="panel-body">
-
                             <div class="list-group">
-
                                 <a href="/#/vmInstance" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-windows"></i>
-                                    <span class="menu-name">实例</span>&nbsp;
+                                    <span class="menu-name"> 实例</span>&nbsp;
                                 </a>
+
                                 <a href="/#/host" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-laptop"></i>
-                                    <span class="menu-name"> Host</span>&nbsp;
+                                    <span class="menu-name"> 主机</span>&nbsp;
                                 </a>
                                 <a href="/#/cluster" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-th"></i>
-                                    <span class="menu-name"> Cluster</span>&nbsp;
+                                    <span class="menu-name"> 集群</span>&nbsp;
                                 </a>
                                 <a href="/#/zone" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-cloud"></i>
-                                    <span class="menu-name"> Zone</span>&nbsp;
+                                    <span class="menu-name"> 域</span>&nbsp;
                                 </a>
                             </div>
                         </div>
                     </div>
--->
                 </div>
-<!--
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-target="#image" href="/#/image">
-                       镜像
+                                镜像
                             </a>
                         </h4>
                     </div>
                 </div>
--->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title" data-toggle="collapse" data-target="#storage">
-            <!--                    Storage-->
-存储
+                                存储
                         </h4>
                     </div>
                     <div id="storage" class="panel-collapse collapse in">
@@ -180,26 +163,25 @@
                             <div class="list-group">
                                 <a href="/#/primaryStorage" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-hdd-o"></i>
-                                    <span class="menu-name"><!-- Primary Storage-->主存储</span>&nbsp;
+                                    <span class="menu-name"> 主存储</span>&nbsp;
                                 </a>
 
                                 <a href="/#/backupStorage" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-save"></i>
-                                    <span class="menu-name"><!--   Backup Storage-->备份存储</span>&nbsp;
+                                    <span class="menu-name"> 备份存储</span>&nbsp;
                                 </a>
                                 <a href="/#/volume" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-inbox"></i>
-                                    <span class="menu-name"> <!--  Volume-->卷</span>&nbsp;
+                                    <span class="menu-name"> 卷</span>&nbsp;
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-<!--
-                 <div class="panel panel-default">
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title" data-toggle="collapse" data-target="#network">
-                        网络
+                            网络
                         </h4>
                     </div>
                     <div id="network" class="panel-collapse collapse in">
@@ -221,12 +203,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title" data-toggle="collapse" data-target="#networkService">
-                          网络服务
+                            网络服务
                         </h4>
                     </div>
                     <div id="networkService" class="panel-collapse collapse in">
                         <div class="panel-body">
-                            <div class="list-group" >
+                            <div class="list-group">
                                 <a href="/#/securityGroup" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-shield"></i>
                                     <span class="menu-name">安全组</span>&nbsp;
@@ -245,88 +227,39 @@
                                 </a>
                                 <a href="/#/virtualRouter" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-sitemap"></i>
-                                    <span class="menu-name"> 虚拟路由</span>&nbsp;
+                                    <span class="menu-name">虚拟路由</span>&nbsp;
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
- -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title" data-toggle="collapse" data-target="#configuration">
-                           配置<!-- Configuration-->
+                            设置
                         </h4>
                     </div>
                     <div id="configuration" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <div class="list-group">
-  
-                                <a href="/#/zone" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-cloud"></i>
-                                    <span class="menu-name"> 域</span>&nbsp;
-                                </a>                
-                                <a href="/#/host" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-laptop"></i>
-                                    <span class="menu-name"> 主机</span>&nbsp;
-                                </a>
-                                <a href="/#/cluster" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-th"></i>
-                                    <span class="menu-name"> 集群</span>&nbsp;
-                                </a>
-                                <a class="list-group-item" href="/#/image">
-                                    <i class="fa fa-fw fa-sm fa-download"></i>
-                                    <span class="menu-name"><!-- Image -->镜像</span>&nbsp;
-                                </a>
-                                <a href="/#/l2Network" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-download"></i>
-                                    <span class="menu-name"> <!--  L2 Network-->二层网络</span>&nbsp;
-                                </a>
-
-                                <a href="/#/l3Network" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-sort-amount-asc"></i>
-                                    <span class="menu-name"> <!--  L3 Network-->三层网络</span>&nbsp;
-                                </a>
-                                <a href="/#/securityGroup" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-shield"></i>
-                                    <span class="menu-name"> <!--  Security Group-->安全组</span>&nbsp;
-                                </a>
-                                <a href="/#/vip" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-random"></i>
-                                    <span class="menu-name"> <!--  VIP-->虚拟IP</span>&nbsp;
-                                </a>
-                                <a href="/#/eip" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-random"></i>
-                                    <span class="menu-name"> <!--  EIP-->弹性IP</span>&nbsp;
-                                </a>
-                                <a href="/#/portForwarding" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-random"></i>
-                                    <span class="menu-name"> <!--  Port Forwarding-->端口转发</span>&nbsp;
-                                </a>
-                                <a href="/#/virtualRouter" class="list-group-item">
-                                    <i class="fa fa-fw fa-sm fa-sitemap"></i>
-                                    <span class="menu-name"> <!--  Virtual Router-->虚拟路由</span>&nbsp;
-                                </a>
-
-
                                 <a href="/#/instanceOffering" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-download"></i>
-                                    <span class="menu-name"> <!--  Instance Offering-->配置模板</span>&nbsp;
+                                    <span class="menu-name">配置模板</span>&nbsp;
                                 </a>
 
                                 <a href="/#/diskOffering" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-sort-amount-asc"></i>
-                                    <span class="menu-name"> <!--  Disk Offering-->磁盘模板</span>&nbsp;
+                                    <span class="menu-name">磁盘模板</span>&nbsp;
                                 </a>
 
                                 <a href="/#/virtualRouterOffering" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-download"></i>
-                                    <span class="menu-name"> <!--  Virtual Router Offering-->虚拟路由模板</span>&nbsp;
+                                    <span class="menu-name">虚拟路由模板</span>&nbsp;
                                 </a>
 
                                 <a href="/#/globalConfig" class="list-group-item">
                                     <i class="fa fa-fw fa-sm fa-download"></i>
-                                    <span class="menu-name"> <!--  Global Configure-->全局设置</span>&nbsp;
+                                    <span class="menu-name">全局配置</span>&nbsp;
                                 </a>
                             </div>
                         </div>
@@ -358,10 +291,6 @@
 -->
 <script src="{{ url_for('static', filename='js/ng-tags-input.js') }}"></script>
 <script src="{{ url_for('static', filename='app/app.js') }}"></script>
-<script type="text/javascript">
-   $(function () { $('#storage').collapse('hide')});
-   $(function () { $('#configuration').collapse('hide')});
-</script>  
 </body>
 
 </html>

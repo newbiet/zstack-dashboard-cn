@@ -19,24 +19,24 @@
             </button>
             <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    操作 <span class="caret"></span>
+                    Action <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
-                    <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
-                    <li><a href ng-click="action.attachCluster()">添加集群</a></li>
-                    <li><a href ng-click="action.detachCluster()">分离集群</a></li>
-                    <li><a href ng-click="action.reconnect()">重新连接</a></li>
+                    <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">Enable</a></li>
+                    <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">Disable</a></li>
+                    <li><a href ng-click="action.attachCluster()">Attach Cluster</a></li>
+                    <li><a href ng-click="action.detachCluster()">Detach Cluster</a></li>
+                    <li><a href ng-click="action.reconnect()">Reconnect</a></li>
                     <li class="divider"></li>
-                    <li><a href style="color:red" ng-click="funcDelete(deletePrimaryStorage)">删除</a></li>
+                    <li><a href style="color:red" ng-click="funcDelete(deletePrimaryStorage)">Delete</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
     <ul class="nav nav-pills">
-        <li class="active"><a data-target="#info" data-toggle="pill" href>Info</a></li>
-        <li><a data-target="#cluster" data-toggle="pill" href ng-click="funcLoadClusters()">Cluster</a></li>
+        <li class="active"><a data-target="#info" data-toggle="pill" href>信息</a></li>
+        <li><a data-target="#cluster" data-toggle="pill" href ng-click="funcLoadClusters()">集群</a></li>
     </ul>
 
 
@@ -50,7 +50,7 @@
                 <div class="panel-heading">
                     <a class="accordion-toggle" data-target="#infoDetails" data-toggle="collapse" href>
                         <i class="z-collapse fa fa-chevron-down"></i>
-                        <span>&nbsp;详情</span>
+                        <span>&nbsp; 详细情况</span>
                     </a>
                 </div>
 
@@ -58,11 +58,11 @@
                     <div class="panel-body">
                         <table class="table z-table-borderless">
                             <tr>
-                                <td><span class="z-label">描叙:</span></td>
+                                <td><span class="z-label">描述:</span></td>
                                 <td><span class="z-description">{{model.current.description}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">使用状态:</span></td>
+                                <td><span class="z-label">启用状态:</span></td>
                                 <td><span class="{{model.current.stateLabel()}}">{{model.current.state}}</span></td>
                             </tr>
                             <tr>
@@ -74,12 +74,12 @@
                                 <td><span>{{model.current.type}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">URL:</span></td>
+                                <td><span class="z-label">URL地址:</span></td>
                                 <td><span>{{model.current.url}}</span></td>
                             </tr>
                           <tr ng-switch="model.current.type">
                             <td ng-switch-when="IscsiFileSystemBackendPrimaryStorage">
-                              <span class="z-label">HOSTNAME</span>
+                              <span class="z-label">主机名</span>
                             </td>
                             <td ng-switch-when="IscsiFileSystemBackendPrimaryStorage">
                               <span>{{model.current.hostname}}</span>
@@ -98,7 +98,7 @@
                                 <td><span>{{model.current.uuid}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">区域 UUID:</span></td>
+                                <td><span class="z-label">域UUID:</span></td>
                                 <td><a href="/#/zone/{{model.current.zoneUuid}}">{{model.current.zoneUuid}}</a></td>
                             </tr>
                             <tr>
@@ -106,11 +106,11 @@
                                 <td><span>{{model.current.createDate}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">最后更改日期:</span></td>
+                                <td><span class="z-label">最近更新日期:</span></td>
                                 <td><span>{{model.current.lastOpDate}}</span></td>
                             </tr>
                         </table>
-                        <p class="z-hint">当主存储连接到包含一个或多个主机的集群后，将显示其总容量/可用容量</p>
+                        <p class="z-hint">在主存储附加到包含一个或多个主机的群集后，总/可用容量将显示</p>
                     </div>
 
                 </div>
@@ -119,7 +119,7 @@
 
         <div class="tab-pane" id="cluster">
             <div kendo-grid k-options="optionsClusterGrid" class="z-flat-table"></div>
-            <p class="z-hint">Clusters listing here have attached to this primary storage</p>
+            <p class="z-hint">这里列出的集群已连接到这个主存储</p>
         </div>
     </div>
 </div>

@@ -10,7 +10,7 @@
 
 <div class="z-pane">
   <ol class="breadcrumb">
-    <li><a href="/#/vmInstance">VM INSTANCE</a></li>
+    <li><a href="/#/vmInstance">虚拟机</a></li>
     <li class="active"><a href>{{model.current.name}}</a></li>
   </ol>
 
@@ -23,7 +23,7 @@
       </button>
       <div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          Action <span class="caret"></span>
+          操作 <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
           <li><a href ng-click="action.start()" ng-show="action.isActionShow('start')">启动</a></li>
@@ -44,9 +44,9 @@
   </div>
 
   <ul class="nav nav-pills">
-    <li class="active"><a data-target="#info" data-toggle="pill" href>Info</a></li>
-    <li><a data-target="#nic" data-toggle="pill" href>Nic</a></li>
-    <li><a data-target="#volume" data-toggle="pill" href>Volume</a></li>
+    <li class="active"><a data-target="#info" data-toggle="pill" href>信息</a></li>
+    <li><a data-target="#nic" data-toggle="pill" href>网络适配器</a></li>
+    <li><a data-target="#volume" data-toggle="pill" href>卷</a></li>
   </ul>
 
   <div class="tab-content">

@@ -3,25 +3,25 @@
         <div class="col-sm-15">
             <div class="tab-content">
                 <div id="createBackupStorageInfo" class="tab-pane active">
-                    <h4 class="z-win-h4">CREATE BACKUP STORAGE</h4>
+                    <h4 class="z-win-h4">创建备份存储</h4>
                     <form class="form" id="formCreate">
                         <div class="form-group col-sm-21">
-                            <label for="name">NAME</label>
-                            <input class="form-control" type="text" id="name" placeholder="(Required) max length of 255 characters" ng-model="infoPage.name" required data-message="name is required">
+                            <label for="name">名称</label>
+                            <input class="form-control" type="text" id="name" placeholder="（必需）最大长度为255个字符" ng-model="infoPage.name" required data-message="name is required">
                         </div>
                         <div class="form-group col-sm-21">
-                            <label for="description">DESCRIPTION</label>
-                            <textarea  class="form-control" rows="5" id="description" placeholder="(Optional) max length of 2048 characters" ng-model="infoPage.description"></textarea>
+                            <label for="description">描述</label>
+                            <textarea  class="form-control" rows="5" id="description" placeholder="（必需）最大长度为2048个字符" ng-model="infoPage.description"></textarea>
                         </div>
                         <div class="form-group col-sm-24">
-                            <label for="type">TYPE</label>
+                            <label for="type">类型</label>
                             <select id="type" kendo-drop-down-list k-options="typeList" class="z-win-dropdown" ng-model="infoPage.type"></select>
-                            <p class="z-hint">(Required) select type of backup storage</p>
+                            <p class="z-hint">（必需）选择备份存储类型</p>
                         </div>
                         <div class="form-group col-sm-21" ng-show="infoPage.type != 'Ceph'">
-                            <label for="url" class="z-block-label">URL</label>
-                            <input id="url" type="text" ng-model="infoPage.url" class="form-control" placeholder="(Required) Url of backup storage">
-                            <p class="z-hint">(Required) for sftp backup storage, url is absolute directory path, for example, '/backupStorage'</p>
+                            <label for="url" class="z-block-label">URL地址</label>
+                            <input id="url" type="text" ng-model="infoPage.url" class="form-control" placeholder="（必需）备份存储的URL">
+                            <p class="z-hint">（必需）对于SFTP备份存储，URL是绝对路径，例如'/backupStorage'</p>
                             <div class="alert alert-danger col-sm-21" ng-show="!infoPage.isUrlValid()">
                                 Not a valid path. Valid path must be an absolute path starting with '/'
                             </div>
@@ -29,39 +29,39 @@
                         <div ng-switch="infoPage.type">
                             <div ng-switch-when="SftpBackupStorage">
                                 <div class="form-group col-sm-21">
-                                    <label for="hostname">HOSTNAME</label>
+                                    <label for="hostname">主机名</label>
                                     <input type="text" class="form-control" id="hostname" placeholder="IP or DNS name of sftp server" ng-model="infoPage.hostname">
                                 </div>
                                 <div class="form-group col-sm-21">
-                                    <label for="username">USER NAME</label>
+                                    <label for="username">用户名</label>
                                     <input type="text" class="form-control" id="username" placeholder="ssh user name of sftp server" ng-model="infoPage.username">
-                                    <p class="z-hint">The user must have root privilege on sftp server</p>
+                                    <p class="z-hint">用户必须拥有对sftp服务器的root权限</p>
                                 </div>
                                 <div class="form-group col-sm-21">
-                                    <label for="password">PASSWORD</label>
+                                    <label for="password">密码</label>
                                     <input type="password" class="form-control" id="password" placeholder="ssh password of sftp server" ng-model="infoPage.password">
                                 </div>
                             </div>
                             <div ng-switch-when="Ceph">
                               <div class="form-group col-sm-21">
-                                <label for="cephhostname">HOSTNAME</label>
+                                <label for="cephhostname">主机名</label>
                                 <input type="text" class="form-control" id="cephhostname" placeholder="IP or DNS name of ceph mon server" ng-model="infoPage.hostname">
                               </div>
                               <div class="form-group col-sm-21">
-                                <label for="cephusername">USER NAME</label>
+                                <label for="cephusername">用户名</label>
                                 <input type="text" class="form-control" id="cephusername" placeholder="ssh user name of ceph mon server" ng-model="infoPage.username">
-                                <p class="z-hint">The user must have root privilege on the ceph mon server</p>
+                                <p class="z-hint">用户必须拥有对ceph mon服务器的root权限</p>
                               </div>
                               <div class="form-group col-sm-21">
-                                <label for="cephpassword">PASSWORD</label>
+                                <label for="cephpassword">密码</label>
                                 <input type="password" class="form-control" id="cephpassword" placeholder="ssh password of ceph mon server" ng-model="infoPage.password">
                               </div>
                               <div class="form-group col-sm-24">
                                 <button type="button" class="btn btn-default" ng-click="infoPage.addCephMon()" ng-disabled="!infoPage.canAddMon()">
                                   <i class="fa fa-plus" style="font-size: 1.2em"></i>
-                                  <span>Add</span>
+                                  <span>添加</span>
                                 </button>
-                                <span class="z-hint">Please add at least one ceph mon server</span>
+                                <span class="z-hint">请添加至少一个ceph mon服务器</span>
                               </div>
                               <div class="form-group col-sm-24">
                                 <div kendo-grid k-options="cephMonGrid__"></div>
@@ -73,21 +73,21 @@
 
                 <div id="createBackupStorageZone" class="tab-pane">
                     <div class="alert alert-warning col-sm-21" ng-show="!zonePage.hasZone()">
-                        No zone is eligible to attach. Please click 'Add' button to proceed.
+                        没有域可附加。请单击“添加”按钮继续进行。
                     </div>
 
-                    <h4 class="z-win-h4">ATTACH ZONE</h4>
+                    <h4 class="z-win-h4">附加域</h4>
                     <form class="form">
                         <div class="form-group col-sm-18">
-                            <label for="ps">ZONE</label>
+                            <label for="ps">域</label>
                             <select id="ps" kendo-multi-select="zoneList__" k-options="zoneListOptions__" class="z-win-dropdown"></select>
-                            <p class="z-hint">(Optional) select one or more zone to attach. Or do it later after adding backup storage</p>
+                            <p class="z-hint">（可选）选择一个或多个区域附加。或者在添加备份存储之后再做它</p>
                         </div>
                     </form>
                 </div>
 
                 <div class="form-group col-sm-21">
-                    <button type="button" class="btn btn-default" ng-click="button.previousClick()" ng-disabled="!button.canPreviousProceed()">Previous</button>
+                    <button type="button" class="btn btn-default" ng-click="button.previousClick()" ng-disabled="!button.canPreviousProceed()">取消</button>
                     <button type="button" class="btn btn-primary" ng-disabled="!button.canNextProceed()" ng-click="button.nextClick()">{{button.nextButtonName()}}</button>
                 </div>
             </div>
@@ -96,8 +96,8 @@
         <div class="col-sm-7">
             <div class="z-wizard-bar">
                 <ul class="nav">
-                    <li class="active"><a data-target="#createBackupStorageInfo" ng-click="button.pageClick('createBackupStorageInfo')">BACKUP STORAGE INFO</a></li>
-                    <li ng-class="{disabled: !psPage.isActive()}"><a data-target="#createBackupStorageZone" ng-click="button.pageClick('createBackupStorageZone')">ATTACH ZONE</a></li>
+                    <li class="active"><a data-target="#createBackupStorageInfo" ng-click="button.pageClick('createBackupStorageInfo')">备份存储信息</a></li>
+                    <li ng-class="{disabled: !psPage.isActive()}"><a data-target="#createBackupStorageZone" ng-click="button.pageClick('createBackupStorageZone')">附加域</a></li>
                 </ul>
             </div>
         </div>

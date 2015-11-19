@@ -5,7 +5,7 @@
 </div>
 
 <div>
-    <h3 class="z-h3"><!--Image-->镜像</h3>
+    <h3 class="z-h3">镜像</h3>
     <div class="btn-group-sm z-btn-bar">
         <button type="button" class="btn btn-default btn-sm" ng-click="funcRefresh()">
             <i class="fa fa-refresh"></i>
@@ -23,17 +23,17 @@
 
         <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px" ng-click="funcCreateImage(winNewImage)">
             <i class="fa fa-plus"></i>
-            <span>&nbsp;<!-- New Image-->创建镜像</span>
+            <span>&nbsp;添加镜像 </span>
         </button>
 
         <div id="ImageFilterContent" style="display: none">
             <form class="form">
                 <div class="form-group">
-                    <label for="fieldList" class="z-block-label">FILTER BY</label>
+                    <label for="fieldList" class="z-block-label">过滤</label>
                     <select id="fieldList" kendo-drop-down-list k-options="filterBy.fieldList" ng-model="filterBy.field"></select>
                 </div>
                 <div class="form-group">
-                    <label class="z-block-label" for="valueList">VALUE</label>
+                    <label class="z-block-label" for="valueList">值</label>
                     <select kendo-drop-down-list id="valueList" ng-disabled="filterBy.isValueListDisabled()" k-options="filterBy.valueList" ng-model="filterBy.value"></select>
                 </div>
                 <button type="button" class="btn btn-sm btn-primary" ng-click="filterBy.confirm(popoverFilterBy)">Confirm</button>
@@ -42,18 +42,18 @@
 
         <div class="btn-group" ng-show="funcIsActionShow()">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-disabled="funcIsActionDisabled()">
-              <!--  Action-->操作 <span class="caret"></span>
+                操作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()"><!--Enable-->开启</a></li>
-                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()"><!--Disable-->关闭</a></li>
+                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
+                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
                 <li class="divider"></li>
-                <li><a href style="color:red" ng-click="funcDeleteImage(deleteImage)"><!--Delete-->删除</a></li>
+                <li><a href style="color:red" ng-click="funcDeleteImage(deleteImage)">删除</a></li>
             </ul>
         </div>
     </div>
 
     <div kendo-grid="ImageGrid" k-options="oImageGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
-    <p class="z-hint"><!--Single click column to show action button-->单击列中对象显示操作按钮</p>
-    <p class="z-hint"><!--Double click column to enter details page-->双击列中对象进入虚拟机详情页面</p>
+    <p class="z-hint">单点击栏，显示操作按钮</p>
+    <p class="z-hint">双击列进入详细信息页面</p>
 </div>

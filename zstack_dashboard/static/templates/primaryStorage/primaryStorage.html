@@ -25,33 +25,33 @@
 
         <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px" ng-click="funcCreatePrimaryStorage(winNewPrimaryStorage)">
             <i class="fa fa-plus"></i>
-            <span>&nbsp; 创建主存储</span>
+            <span>&nbsp; 新建主存储</span>
         </button>
 
         <div id="primaryStorageFilterContent" style="display: none">
             <form class="form">
                 <div class="form-group">
-                    <label for="fieldList" class="z-block-label">FILTER BY</label>
+                    <label for="fieldList" class="z-block-label">过滤</label>
                     <select id="fieldList" kendo-drop-down-list k-options="filterBy.fieldList" ng-model="filterBy.field"></select>
                 </div>
                 <div class="form-group">
-                    <label class="z-block-label" for="valueList">VALUE</label>
+                    <label class="z-block-label" for="valueList">值</label>
                     <select kendo-drop-down-list id="valueList" ng-disabled="filterBy.isValueListDisabled()" k-options="filterBy.valueList" ng-model="filterBy.value"></select>
                 </div>
-                <button type="button" class="btn btn-sm btn-primary" ng-click="filterBy.confirm(popoverFilterBy)">Confirm</button>
+                <button type="button" class="btn btn-sm btn-primary" ng-click="filterBy.confirm(popoverFilterBy)">确认</button>
             </form>
         </div>
 
         <div class="btn-group" ng-show="funcIsActionShow()">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-disabled="funcIsActionDisabled()">
-                操作 <span class="caret"></span>
+                动作 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
-                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
-                <li><a href ng-click="action.attachCluster()">添加集群</a></li>
+                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">启用</a></li>
+                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">禁用</a></li>
+                <li><a href ng-click="action.attachCluster()">连接集群</a></li>
                 <li><a href ng-click="action.detachCluster()">分离集群</a></li>
-                <li><a href ng-click="action.reconnect()">重连</a></li>
+                <li><a href ng-click="action.reconnect()">重新连接</a></li>
                 <li class="divider"></li>
                 <li><a href style="color:red" ng-click="funcDeletePrimaryStorage(deletePrimaryStorage)">删除</a></li>
             </ul>
@@ -60,6 +60,6 @@
 
     <div kendo-grid="primaryStorageGrid" k-options="oPrimaryStorageGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
     <p class="z-hint">单击列中对象显示操作按钮</p>
-    <p class="z-hint">双击列中对象进入详情页面</p>
-    <p class="z-hint">当主存储连接到包含一个或多个主机的集群后，将显示其总容量/可用容量</p>
+    <p class="z-hint">双击列中对象进入虚拟机详情页面</p>
+    <p class="z-hint">在主存储附加到包含一个或多个主机的群集后，总/可用容量将显示</p>
 </div>

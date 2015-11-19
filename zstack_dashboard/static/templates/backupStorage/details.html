@@ -22,11 +22,11 @@
                     操作 <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
-                    <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
+                    <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">启用</a></li>
+                    <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">禁用</a></li>
                     <li><a href ng-show="action.isReconnectShow()" ng-click="action.reconnect()">重新连接</a></li>
-                    <li><a href ng-click="action.attachZone()">添加区域</a></li>
-                    <li><a href ng-click="action.detachZone()">分离区域</a></li>
+                    <li><a href ng-click="action.attachZone()">连接域</a></li>
+                    <li><a href ng-click="action.detachZone()">分离域</a></li>
                     <li class="divider"></li>
                     <li><a href style="color:red" ng-click="funcDelete(deleteBackupStorage)">删除</a></li>
                 </ul>
@@ -35,8 +35,8 @@
     </div>
 
     <ul class="nav nav-pills">
-        <li class="active"><a data-target="#info" data-toggle="pill" href>Info</a></li>
-        <li><a data-target="#cluster" data-toggle="pill" href>Zone</a></li>
+        <li class="active"><a data-target="#info" data-toggle="pill" href>信息</a></li>
+        <li><a data-target="#cluster" data-toggle="pill" href>域</a></li>
     </ul>
 
 
@@ -58,11 +58,11 @@
                     <div class="panel-body">
                         <table class="table z-table-borderless">
                             <tr>
-                                <td><span class="z-label">描叙:</span></td>
+                                <td><span class="z-label">描述:</span></td>
                                 <td><span class="z-description">{{model.current.description}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">使用状态:</span></td>
+                                <td><span class="z-label">启用状态:</span></td>
                                 <td><span class="{{model.current.stateLabel()}}">{{model.current.state}}</span></td>
                             </tr>
                             <tr>
@@ -74,12 +74,12 @@
                                 <td><span>{{model.current.type}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">URL:</span></td>
+                                <td><span class="z-label">URL地址:</span></td>
                                 <td><span>{{model.current.url}}</span></td>
                             </tr>
                             <tr ng-switch="model.current.type">
                                 <td ng-switch-when="SftpBackupStorage">
-                                    <span class="z-label">HOSTNAME</span>
+                                    <span class="z-label">主机名</span>
                                 </td>
                                 <td ng-switch-when="SftpBackupStorage">
                                     <span>{{model.current.hostname}}</span>
@@ -102,7 +102,7 @@
                                 <td><span>{{model.current.createDate}}</span></td>
                             </tr>
                             <tr>
-                                <td><span class="z-label">最后更改日期:</span></td>
+                                <td><span class="z-label">最近更新日期:</span></td>
                                 <td><span>{{model.current.lastOpDate}}</span></td>
                             </tr>
                         </table>
@@ -114,7 +114,7 @@
 
         <div class="tab-pane" id="cluster">
             <div kendo-grid k-options="optionsZoneGrid" class="z-flat-table"></div>
-            <p class="z-hint">Zones listing here have attached to this backup storage</p>
+            <p class="z-hint">这里列出的域已经连接这个备份存储</p>
         </div>
     </div>
 </div>

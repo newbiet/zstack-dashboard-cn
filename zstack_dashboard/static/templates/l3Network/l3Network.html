@@ -9,7 +9,7 @@
 </div>
 
 <div>
-    <h3 class="z-h3">三层网络</h3>
+    <h3 class="z-h3">L3 NETWORK</h3>
     <div class="btn-group-sm z-btn-bar">
         <button type="button" class="btn btn-default btn-sm" ng-click="funcRefresh()">
             <i class="fa fa-refresh"></i>
@@ -27,7 +27,7 @@
 
         <button type="button" class="btn btn-success btn-sm" style="margin-left: 20px" ng-click="funcCreateL3Network(winNewL3Network)">
             <i class="fa fa-plus"></i>
-            <span>&nbsp; 创建三层网络</span>
+            <span>&nbsp; New L3 Network</span>
         </button>
 
         <div id="l3NetworkFilterContent" style="display: none">
@@ -46,22 +46,22 @@
 
         <div class="btn-group" ng-show="funcIsActionShow()">
             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-disabled="funcIsActionDisabled()">
-                操作 <span class="caret"></span>
+                Action <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">可用</a></li>
-                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">不可用</a></li>
-                <li><a href ng-click="action.addIpRange()">添加IP范围</a></li>
-                <li><a href ng-click="action.deleteIpRange()">删除IP范围</a></li>
-                <li><a href ng-click="action.addDns()">添加DNS</a></li>
-                <li><a href ng-click="action.deleteDns()">删除DNS</a></li>
+                <li><a href ng-click="action.enable()" ng-show="model.current.isEnableShow()">Enable</a></li>
+                <li><a href ng-click="action.disable()" ng-show="model.current.isDisableShow()">Disable</a></li>
+                <li><a href ng-click="action.addIpRange()">Add Ip Range</a></li>
+                <li><a href ng-click="action.deleteIpRange()">Delete Ip Range</a></li>
+                <li><a href ng-click="action.addDns()">Add DNS</a></li>
+                <li><a href ng-click="action.deleteDns()">Delete DNS</a></li>
                 <li class="divider"></li>
-                <li><a href style="color:red" ng-click="funcDeleteL3Network(deleteL3Network)">删除</a></li>
+                <li><a href style="color:red" ng-click="funcDeleteL3Network(deleteL3Network)">Delete</a></li>
             </ul>
         </div>
     </div>
 
     <div kendo-grid="l3NetworkGrid" k-options="oL3NetworkGrid.options" z-grid-double-click="funcGridDoubleClick" class="z-flat-table"></div>
-    <p class="z-hint">单击列中对象显示操作按钮</p>
-    <p class="z-hint">双击列中对象进入详情列表</p>
+    <p class="z-hint">Single click column to show action button</p>
+    <p class="z-hint">Double click column to enter details page</p>
 </div>
