@@ -380,30 +380,30 @@ module MVmInstance {
       this.options.columns = [
         {
           field: 'name',
-          title: 'NAME',
+          title: '名称',
           width: '20%',
           template: '<a href="/\\#/vmInstance/{{dataItem.uuid}}">{{dataItem.name}}</a>'
         },
         {
           field: 'description',
-          title: 'DESCRIPTION',
+          title: '描述',
           width: '20%'
         },
         {
           field: 'defaultIp',
-          title: 'DEFAULT IP',
+          title: '默认 IP',
           width: '20%',
           template: '{{dataItem.defaultIp}}'
         },
         {
           field: 'hostIp',
-          title: 'HOST IP',
+          title: '主机 IP',
           width: '20%',
           template: '<a href="/\\#/host/{{dataItem.hostUuid}}">{{dataItem.managementIp}}</a>'
         },
         {
           field: 'state',
-          title: 'STATE',
+          title: '连接状态',
           width: '20%',
           template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
         },
@@ -662,7 +662,7 @@ module MVmInstance {
       };
 
       $scope.optionsDeleteVmInstance = {
-        title: 'DELETE VM INSTANCE',
+        title: '删除 VM 实例',
         btnType: 'btn-danger',
         width: '350px',
 
@@ -761,33 +761,33 @@ module MVmInstance {
         columns: [
           {
             field: 'deviceId',
-            title: 'DEVICE ID',
+            title: '设备 ID',
             width: '4%'
           },
           {
             field: 'l3NetworkUuid',
-            title: 'L3 Network',
+            title: 'L3 网络',
             width: '20%',
             template: '<a href="/\\#/l3Network/{{dataItem.l3NetworkUuid}}">{{dataItem.l3NetworkUuid}}</a>'
           },
           {
             field: 'ip',
-            title: 'IP',
+            title: 'IP地址',
             width: '14%'
           },
           {
             field: 'netmask',
-            title: 'NETMASK',
+            title: '子网掩码',
             width: '14%'
           },
           {
             field: 'gateway',
-            title: 'GATEWAY',
+            title: '网关',
             width: '14%'
           },
           {
             field: 'mac',
-            title: 'MAC',
+            title: 'MAC地址',
             width: '14%'
 
           },
@@ -818,29 +818,29 @@ module MVmInstance {
         columns: [
           {
             field: 'deviceId',
-            title: 'DEVICE ID',
+            title: '设备 ID',
             width: '10%',
             template: '<a href="/\\#/volume/{{dataItem.uuid}}">{{dataItem.deviceId}}</a>'
           },
           {
             field: 'name',
-            title: 'NAME',
+            title: '名称',
             width: '18%'
 
           },
           {
             field: 'type',
-            title: 'TYPE',
+            title: '类型',
             width: '18%'
           },
           {
             field: 'state',
-            title: 'STATE',
+            title: '启用状态',
             width: '18%'
           },
           {
             field: 'status',
-            title: 'STATUS',
+            title: '连接状态',
             width: '18%'
           },
           {
@@ -958,7 +958,7 @@ module MVmInstance {
       };
 
       $scope.optionsDeleteVmInstance = {
-        title: 'DELETE VM INSTANCE',
+        title: '删除 VM 实例',
         btnType: 'btn-danger',
         width: '350px',
 
@@ -1515,12 +1515,12 @@ module MVmInstance {
                 },
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '44%'
                 },
                 {
                     field: 'staticIp',
-                    title: 'STATIC IP',
+                    title: '静态 IP',
                     width: '44%'
                 }
             ],

@@ -470,35 +470,35 @@ module MVolume {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/volume/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '虚拟机管理程序',
                     width: '10%'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '10%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '启用状态',
                     width: '15%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '连接状态',
                     width: '15%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
                 {
                     field: 'vmInstanceUuid',
-                    title: 'VM INSTANCE UUID',
+                    title: 'VM 实例 UUID',
                     width: '20%',
                     template: '<a href="/\\#/vmInstance/{{dataItem.vmInstanceUuid}}">{{dataItem.vmInstanceUuid}}</a>'
                 },
@@ -751,7 +751,7 @@ module MVolume {
             };
 
             $scope.optionsDeleteSnapshot = {
-                title: 'DELETE VOLUME SNAPSHOT',
+                title: '删除 VOLUME 快照',
                 description: "All descendants of this snapshot will be deleted as well",
                 confirm: ()=> {
                     spMgr.delete($scope.model.current, ()=> {
@@ -812,13 +812,13 @@ module MVolume {
                 columns: [
                     {
                         field: 'name',
-                        title: 'BACKUP STORAGE NAME',
+                        title: '备份存储名称',
                         width: '20%',
                         template: '<a href="/\\#/backupStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'installPath',
-                        title: 'INSTALL PATH',
+                        title: '安装路径',
                         width: '80%'
                     },
                 ],
@@ -908,7 +908,7 @@ module MVolume {
             };
 
             $scope.optionsDeleteVolume = {
-                title: 'DELETE VOLUME',
+                title: '删除卷',
                 description: ()=> {
                     return Utils.sprintf("The volume[{0}] will be detached from vm if attached. Confirm delete?", $scope.model.current.name);
                 },
@@ -922,7 +922,7 @@ module MVolume {
             };
 
             $scope.optionsDeleteSnapshot = {
-                title: 'DELETE VOLUME SNAPSHOT',
+                title: '删除卷快照',
                 description: "All descendants of this snapshot will be deleted as well",
                 confirm: ()=> {
                     spMgr.delete($scope.model.snapshot, ()=>{
@@ -1145,7 +1145,7 @@ module MVolume {
             };
 
             $scope.optionsDeleteVolume = {
-                title: 'DELETE DATA VOLUME',
+                title: '删除文件卷',
                 description: ()=> {
                     return Utils.sprintf("The volume[{0}] will be detached from vm if attached. Confirm delete?", $scope.model.current.name);
                 },

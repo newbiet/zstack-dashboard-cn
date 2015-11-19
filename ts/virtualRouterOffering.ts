@@ -188,40 +188,40 @@ module MVirtualRouterOffering {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/virtualRouterOffering/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '15%'
                 },
                 {
                     field: 'cpuNum',
-                    title: 'CPU NUMBER',
+                    title: 'CPU 数目',
                     width: '10%'
                 },
                 {
                     field: 'cpuSpeed',
-                    title: 'CPU SPEED',
+                    title: 'CPU 速度',
                     width: '10%'
                 },
                 {
                     field: 'memorySize',
-                    title: 'MEMORY',
+                    title: '内存大小',
                     width: '15%',
                     template: '<span>{{dataItem.memorySize | size}}</span>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '启用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'isDefault',
-                    title: 'DEFAULT OFFERING',
+                    title: '默认提供',
                     width: '10%',
                     template: '<span class="{{dataItem.isDefaultLabel()}}">{{dataItem.isDefault ? "TRUE" : "" }}</span>'
                 },
@@ -370,7 +370,7 @@ module MVirtualRouterOffering {
             };
 
             $scope.optionsDeleteVirtualRouterOffering = {
-                title: 'DELETE VIRTUAL ROUTER OFFERING',
+                title: '删除虚拟路由提供',
                 btnType: 'btn-danger',
                 description: ()=>{
                     return $scope.model.current.name;
@@ -506,7 +506,7 @@ module MVirtualRouterOffering {
             };
 
             $scope.optionsDeleteVirtualRouterOffering = {
-                title: 'DELETE VIRTUAL ROUTER OFFERING',
+                title: '删除虚拟路由提供',
                 btnType: 'btn-danger',
                 description: ()=>{
                     return $scope.model.current.name;

@@ -260,29 +260,29 @@ module MVirtualRouter {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%',
                     template: '<a href="/\\#/vmInstance/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '虚拟机管理程序',
                     width: '20%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '启用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '连接状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
@@ -487,7 +487,7 @@ module MVirtualRouter {
             };
 
             $scope.optionsDeleteVirtualRouter = {
-                title: 'DELETE VIRTUAL ROUTER',
+                title: '删除虚拟路由',
                 confirm: ()=> {
                     vmMgr.delete($scope.model.current, (ret : any)=> {
                         $scope.model.resetCurrent();
@@ -530,33 +530,33 @@ module MVirtualRouter {
                 columns: [
                     {
                         field: 'deviceId',
-                        title: 'DEVICE ID',
+                        title: '设备 ID',
                         width: '4%'
                     },
                     {
                         field: 'l3NetworkUuid',
-                        title: 'L3 Network',
+                        title: 'L3 网络',
                         width: '20%',
                         template: '<a href="/\\#/l3Network/{{dataItem.l3NetworkUuid}}">{{dataItem.l3NetworkUuid}}</a>'
                     },
                     {
                         field: 'ip',
-                        title: 'IP',
+                        title: 'IP地址',
                         width: '14%'
                     },
                     {
                         field: 'netmask',
-                        title: 'NETMASK',
+                        title: '子网掩码',
                         width: '14%'
                     },
                     {
                         field: 'gateway',
-                        title: 'GATEWAY',
+                        title: '网关',
                         width: '14%'
                     },
                     {
                         field: 'mac',
-                        title: 'MAC',
+                        title: 'MAC地址',
                         width: '14%'
 
                     },
@@ -587,29 +587,29 @@ module MVirtualRouter {
                 columns: [
                     {
                         field: 'deviceId',
-                        title: 'DEVICE ID',
+                        title: '设备 ID',
                         width: '10%',
                         template: '<a href="/\\#/volume/{{dataItem.uuid}}">{{dataItem.deviceId}}</a>'
                     },
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名字',
                         width: '18%'
 
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '18%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '启用状态',
                         width: '18%'
                     },
                     {
                         field: 'status',
-                        title: 'STATUS',
+                        title: '连接状态',
                         width: '18%'
                     },
                     {
@@ -632,7 +632,7 @@ module MVirtualRouter {
             };
 
             $scope.optionsReconnectVirtualRouter = {
-                title: 'RECONNECT VIRTUAL ROUTER',
+                title: '重新连接虚拟路由',
                 btnType: 'btn-primary',
                 width: '350px',
 
@@ -744,7 +744,7 @@ module MVirtualRouter {
             };
 
             $scope.optionsDeleteVirtualRouter = {
-                title: 'DELETE VIRTUAL ROUTER',
+                title: '删除虚拟路由',
 
                 confirm: ()=> {
                     vmMgr.delete($scope.model.current, (ret : any)=> {
@@ -784,7 +784,7 @@ module MVirtualRouter {
             });
 
             $scope.optionsReconnectVirtualRouter = {
-                title: 'RECONNECT VIRTUAL ROUTER',
+                title: '重新连接虚拟路由',
                 btnType: 'btn-primary',
                 width: '350px',
 
