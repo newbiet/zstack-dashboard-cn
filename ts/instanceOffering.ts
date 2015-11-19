@@ -171,34 +171,34 @@ module MInstanceOffering {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/instanceOffering/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'cpuNum',
-                    title: 'CPU NUMBER',
+                    title: 'CPU 核数',
                     width: '10%'
                 },
                 {
                     field: 'cpuSpeed',
-                    title: 'CPU SPEED',
+                    title: 'CPU 频率',
                     width: '10%'
                 },
                 {
                     field: 'memorySize',
-                    title: 'MEMORY',
+                    title: '内存',
                     width: '15%',
                     template: '<span>{{dataItem.memorySize | size}}</span>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '15%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -346,7 +346,7 @@ module MInstanceOffering {
             };
 
             $scope.optionsDeleteInstanceOffering = {
-                title: 'DELETE INSTANCE OFFERING',
+                title: '删除实例模板',
                 btnType: 'btn-danger',
                 width: '350px',
                 description: ()=>{
