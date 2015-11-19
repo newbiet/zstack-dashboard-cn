@@ -162,7 +162,7 @@ module MDiskOffering {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%',
                     template: '<a href="/\\#/diskOffering/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
