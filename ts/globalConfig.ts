@@ -58,22 +58,22 @@ module MGlobalConfig {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '20%'
                 },
                 {
                     field: 'category',
-                    title: 'CATEGORY',
+                    title: '类别',
                     width: '20%'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '40%'
                 },
                 {
                     field: 'value',
-                    title: 'VALUE',
+                    title: '值',
                     width: '20%'
                 }
             ];
@@ -191,12 +191,12 @@ module MGlobalConfig {
             var qobj = new ApiHeader.QueryObject();
             qobj.conditions = [
                 {
-                    name: 'category',
+                    name: '类别',
                     op: '=',
                     value: current.category
                 },
                 {
-                    name: 'name',
+                    name: '名称',
                     op: '=',
                     value: current.name
                 }
