@@ -168,7 +168,7 @@ module MDiskOffering {
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
