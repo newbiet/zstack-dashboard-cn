@@ -243,24 +243,24 @@ module MEip {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '25%',
                     template: '<a href="/\\#/eip/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '25%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'vipIp',
-                    title: 'VIP IP',
+                    title: '虚拟IP',
                     width: '25%'
                 },
                 {
                     field: 'vmNicIp',
-                    title: 'VM NIC IP',
+                    title: '虚拟机网卡IP',
                     width: '25%'
                 },
             ];
@@ -506,7 +506,7 @@ module MEip {
             };
 
             $scope.optionsDeleteEip = {
-                title: 'DELETE EIP',
+                title: '删除弹性IP',
                 btnType: 'btn-danger',
                 width: '350px',
                 description: ()=>{
@@ -654,7 +654,7 @@ module MEip {
             };
 
             $scope.optionsDeleteEip = {
-                title: 'DELETE EIP',
+                title: '删除弹性IP',
                 btnType: 'btn-danger',
                 width: '350px',
                 description: ()=>{
