@@ -173,13 +173,13 @@ module MDiskOffering {
                 },
                 {
                     field: 'diskSize',
-                    title: 'DISK SIZE',
+                    title: '磁盘大小',
                     width: '20%',
                     template: '<span>{{dataItem.diskSize | size}}</span>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '20%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -327,7 +327,7 @@ module MDiskOffering {
             };
 
             $scope.optionsDeleteDiskOffering = {
-                title: 'DELETE DISK OFFERING',
+                title: '删除磁盘模板',
                 description: ()=>{
                     return current.name;
                 },
@@ -456,7 +456,7 @@ module MDiskOffering {
             };
 
             $scope.optionsDeleteDiskOffering = {
-                title: 'DELETE DISK OFFERING',
+                title: '删除磁盘模板',
                 description: ()=>{
                     return $scope.model.current.name;
                 },
