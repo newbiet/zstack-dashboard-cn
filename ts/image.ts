@@ -183,41 +183,41 @@ module MImage {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/image/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'mediaType',
-                    title: 'MEIDA TYPE',
+                    title: '模板类型',
                     width: '15%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '使用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '可用状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
                 {
                     field: 'guestOsType',
-                    title: 'GUEST OS',
+                    title: '客户端系统',
                     width: '15%'
                 },
                 {
                     field: 'size',
-                    title: 'SIZE',
+                    title: '大小',
                     width: '10%',
                     template: '<span>{{dataItem.size | size}}</span>'
                 },
                 {
                     field: 'format',
-                    title: 'FORMAT',
+                    title: '格式',
                     width: '10%'
                 },
                 {
@@ -385,7 +385,7 @@ module MImage {
             };
 
             $scope.optionsDeleteImage = {
-                title: 'DELETE IMAGE',
+                title: '删除镜像',
                 width: '350px',
                 btnType: 'btn-danger',
 
@@ -432,13 +432,13 @@ module MImage {
                 columns: [
                     {
                         field: 'name',
-                        title: 'BACKUP STORAGE NAME',
+                        title: '二级存储名称',
                         width: '20%',
                         template: '<a href="/\\#/backupStorage/{{dataItem.bsUuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'installPath',
-                        title: 'INSTALL PATH',
+                        title: '安装路径',
                         width: '80%'
                     }
                 ],
@@ -633,7 +633,7 @@ module MImage {
             };
 
             $scope.optionsDeleteImage = {
-                title: 'DELETE IMAGE',
+                title: '删除镜像',
                 width: '350px',
                 btnType: 'btn-danger',
 
