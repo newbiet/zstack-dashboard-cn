@@ -476,7 +476,7 @@ module MVolume {
                 },
                 {
                     field: 'hypervisorType',
-                    title: '虚拟机管理程序',
+                    title: '虚拟机监视器',
                     width: '10%'
                 },
                 {
@@ -498,7 +498,7 @@ module MVolume {
                 },
                 {
                     field: 'vmInstanceUuid',
-                    title: 'VM 实例 UUID',
+                    title: '虚拟机实例 UUID',
                     width: '20%',
                     template: '<a href="/\\#/vmInstance/{{dataItem.vmInstanceUuid}}">{{dataItem.vmInstanceUuid}}</a>'
                 },
@@ -751,7 +751,7 @@ module MVolume {
             };
 
             $scope.optionsDeleteSnapshot = {
-                title: '删除 VOLUME 快照',
+                title: '删除卷快照',
                 description: "All descendants of this snapshot will be deleted as well",
                 confirm: ()=> {
                     spMgr.delete($scope.model.current, ()=> {

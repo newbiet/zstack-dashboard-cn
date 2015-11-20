@@ -221,7 +221,7 @@ module MVirtualRouterOffering {
                 },
                 {
                     field: 'isDefault',
-                    title: '默认提供',
+                    title: '默认模板',
                     width: '10%',
                     template: '<span class="{{dataItem.isDefaultLabel()}}">{{dataItem.isDefault ? "TRUE" : "" }}</span>'
                 },
@@ -370,7 +370,7 @@ module MVirtualRouterOffering {
             };
 
             $scope.optionsDeleteVirtualRouterOffering = {
-                title: '删除虚拟路由提供',
+                title: '删除虚拟路由模板',
                 btnType: 'btn-danger',
                 description: ()=>{
                     return $scope.model.current.name;
@@ -506,7 +506,7 @@ module MVirtualRouterOffering {
             };
 
             $scope.optionsDeleteVirtualRouterOffering = {
-                title: '删除虚拟路由提供',
+                title: '删除虚拟路由模板',
                 btnType: 'btn-danger',
                 description: ()=>{
                     return $scope.model.current.name;

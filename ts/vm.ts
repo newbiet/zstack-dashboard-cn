@@ -662,7 +662,7 @@ module MVmInstance {
       };
 
       $scope.optionsDeleteVmInstance = {
-        title: '删除 VM 实例',
+        title: '删除虚拟机实例',
         btnType: 'btn-danger',
         width: '350px',
 
@@ -958,7 +958,7 @@ module MVmInstance {
       };
 
       $scope.optionsDeleteVmInstance = {
-        title: '删除 VM 实例',
+        title: '删除虚拟机实例',
         btnType: 'btn-danger',
         width: '350px',
 

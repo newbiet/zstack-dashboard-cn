@@ -271,7 +271,7 @@ module MVirtualRouter {
                 },
                 {
                     field: 'hypervisorType',
-                    title: '虚拟机管理程序',
+                    title: '虚拟机监视器',
                     width: '20%'
                 },
                 {
