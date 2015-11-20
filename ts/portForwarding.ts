@@ -247,44 +247,44 @@ module MPortForwarding {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/pf/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'vipPortStart',
-                    title: 'VIP PORT START',
+                    title: '虚拟IP起始端口',
                     width: '10%'
                 },
                 {
                     field: 'vipPortEnd',
-                    title: 'VIP PORT END',
+                    title: '虚拟IP终止端口',
                     width: '10%'
                 },
                 {
                     field: 'privatePortStart',
-                    title: 'GUEST PORT START',
+                    title: 'GUEST起始端口',
                     width: '10%'
                 },
                 {
                     field: 'privatePortEnd',
-                    title: 'GUEST PORT END',
+                    title: 'GUEST终止端口',
                     width: '10%'
                 },
                 {
                     field: 'vipIp',
-                    title: 'VIP IP',
+                    title: '虚拟IP',
                     width: '20%'
                 },
                 {
                     field: 'vmNicIp',
-                    title: 'VM NIC IP',
+                    title: '虚拟机网卡IP',
                     width: '20%'
                 },
             ];
@@ -434,11 +434,11 @@ module MPortForwarding {
                 dataSource: new kendo.data.DataSource({
                     data: [
                         {
-                            name: 'None',
+                            name: '无',
                             value: FilterBy.NONE
                         },
                         {
-                            name: 'State',
+                            name: '状态',
                             value: FilterBy.STATE
                         }
                     ]
@@ -530,7 +530,7 @@ module MPortForwarding {
             };
 
             $scope.optionsDeletePortForwarding = {
-                title: 'DELETE PORT FORWARDING RULE',
+                title: '删除转发端口',
                 description: ()=>{
                     return current.name;
                 },
@@ -603,43 +603,43 @@ module MPortForwarding {
             $scope.optionsSortBy = {
                 fields: [
                     {
-                        name: 'Name',
+                        name: '名称',
                         value: 'name'
                     },
                     {
-                        name: 'Description',
+                        name: '描述',
                         value: 'description'
                     },
                     {
-                        name: 'VIP Port Start',
+                        name: '虚拟IP起始端口',
                         value: 'vipPortStart'
                     },
                     {
-                        name: 'VIP Port End',
+                        name: '虚拟IP终止端口',
                         value: 'vipPortEnd'
                     },
                     {
-                        name: 'Private Port Start',
+                        name: '私有起始端口',
                         value: 'privatePortStart'
                     },
                     {
-                        name: 'Private Port End',
+                        name: '私有终止端口',
                         value: 'privatePortEnd'
                     },
                     {
-                        name: 'Protocol',
+                        name: '协议',
                         value: 'protocolType'
                     },
                     {
-                        name: 'State',
+                        name: '状态',
                         value: 'state'
                     },
                     {
-                        name: 'Created Date',
+                        name: '创建日期',
                         value: 'createDate'
                     },
                     {
-                        name: 'Last Updated Date',
+                        name: '最后更新日期',
                         value: 'lastOpDate'
                     }
                 ],
@@ -652,7 +652,7 @@ module MPortForwarding {
 
             $scope.optionsSearch = {
                 fields: ApiHeader.PortForwardingRuleInventoryQueryable,
-                name: 'PortForwarding',
+                name: '端口转发',
                 schema: {
                     state: {
                         type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
@@ -702,7 +702,7 @@ module MPortForwarding {
             };
 
             $scope.optionsDeletePortForwarding = {
-                title: 'DELETE PORT FORWARDING RULE',
+                title: '删除转发端口',
                 description: ()=>{
                     return $scope.model.current.name;
                 },
@@ -840,7 +840,7 @@ module MPortForwarding {
             chain.then(()=>{
                 var qobj = new ApiHeader.QueryObject();
                 qobj.conditions = [{
-                    name: 'state',
+                    name: '状态',
                     op: '=',
                     value: 'Enabled'
                 },{
@@ -865,7 +865,7 @@ module MPortForwarding {
                     op: '=',
                     value: 'Enabled'
                 },{
-                    name: 'useFor',
+                    name: '使用',
                     op: '=',
                     value: 'PortForwarding'
                 }];
@@ -987,10 +987,10 @@ module MPortForwarding {
                 $scope.vipMethodOptions__ = {
                     dataSource: new kendo.data.DataSource({
                         data: [{
-                            name: "Create New VIP",
+                            name: "创建新的虚拟IP",
                             field: CreatePortForwarding.CREATE_NEW_VIP
                         },{
-                            name: "Use Existing VIP",
+                            name: "使用现有的虚拟IP",
                             field: CreatePortForwarding.USE_EXISTING_VIP
                         }]
                     }),

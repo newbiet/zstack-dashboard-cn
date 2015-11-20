@@ -160,23 +160,23 @@ module ML2Network {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/l2Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '25%'
                 },
                 {
                     field: 'physicalInterface',
-                    title: 'PHYSICAL INTERFACE',
+                    title: '物理接口',
                     width: '25%'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '20%'
                 },
                 {
@@ -228,11 +228,11 @@ module ML2Network {
                 dataSource: new kendo.data.DataSource({
                     data: [
                         {
-                            name: 'None',
+                            name: '无',
                             value: FilterBy.NONE
                         },
                         {
-                            name: 'Type',
+                            name: '类型',
                             value: FilterBy.TYPE
                         }
                     ]
@@ -322,7 +322,7 @@ module ML2Network {
             };
 
             $scope.optionsDeleteL2Network = {
-                title: 'DELETE L2 NETWORK',
+                title: '删除二级网络',
                 html: '<strong><p>Deleting L2 Network will cause:</p></strong>' +
                     '<ul><li><strong>Clusters to which this l2Network has attached will be detached</strong></li>' +
                     '<li><strong>l3Networks on this l2Network will be detached</strong></li>' +
@@ -393,25 +393,25 @@ module ML2Network {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '20%',
                         template: '<a href="/\\#/cluster/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '20%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
 
                     },
                     {
                         field: 'hypervisorType',
-                        title: 'HYPERVISOR',
+                        title: '虚拟机管理程序',
                         width: '20%'
                     },
                     {
@@ -476,27 +476,27 @@ module ML2Network {
             $scope.optionsSortBy = {
                 fields: [
                     {
-                        name: 'Name',
+                        name: '名称',
                         value: 'name'
                     },
                     {
-                        name: 'Description',
+                        name: '描述',
                         value: 'Description'
                     },
                     {
-                        name: 'Physical Interface',
+                        name: '物理接口',
                         value: 'physicalInterface'
                     },
                     {
-                        name: 'Type',
+                        name: '类型',
                         value: 'type'
                     },
                     {
-                        name: 'Created Date',
+                        name: '创建日期',
                         value: 'createDate'
                     },
                     {
-                        name: 'Last Updated Date',
+                        name: '最后更新日期',
                         value: 'lastOpDate'
                     }
                 ],
@@ -509,7 +509,7 @@ module ML2Network {
 
             $scope.optionsSearch = {
                 fields: ApiHeader.L2NetworkInventoryQueryable,
-                name: 'L2Network',
+                name: '二级网络',
                 schema: {
                     type: {
                         type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
@@ -565,7 +565,7 @@ module ML2Network {
             };
 
             $scope.optionsDeleteL2Network = {
-                title: 'DELETE L2 NETWORK',
+                title: '删除二级网络',
                 html: '<strong><p>Deleting L2 Network will cause:</p></strong>' +
                     '<ul><li><strong>Clusters to which this l2Network has attached will be detached</strong></li>' +
                     '<li><strong>l3Networks on this l2Network will be detached</strong></li>' +
@@ -656,7 +656,7 @@ module ML2Network {
             var qobj = new ApiHeader.QueryObject();
             qobj.conditions = [
                 {
-                    name: 'zoneUuid',
+                    name: '域的Uuid',
                     op: '=',
                     value: zoneUuid
                 }
@@ -970,7 +970,7 @@ module ML2Network {
                         value: this.options.l2Network.attachedClusterUuids.join()
                     },
                     {
-                        name: 'zoneUuid',
+                        name: '域的Uuid',
                         op: '=',
                         value: this.options.l2Network.zoneUuid
                     }
