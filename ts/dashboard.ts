@@ -1,4 +1,4 @@
-/// <reference path="d.ts/angularjs/angular.d.ts" />
+﻿/// <reference path="d.ts/angularjs/angular.d.ts" />
 /// <reference path="d.ts/kendo.all.d.ts" />
 
 module MDashboard {
@@ -21,25 +21,25 @@ module MDashboard {
                 percent: 0
             });
             var memory =  new kendo.data.ObservableObject({
-                name: 'MEMORY',
+                name: '内存',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var priCap = new kendo.data.ObservableObject({
-                name: 'PRIMARY STORAGE',
+                name: '主存储',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var backupCap = new kendo.data.ObservableObject({
-                name: 'BACKUP STORAGE',
+                name: '备份存储',
                 total: 0,
                 available: 0,
                 percent: 0
             });
             var ip = new kendo.data.ObservableObject({
-                name: 'IP ADDRESS',
+                name: 'IP 地址',
                 total: 0,
                 available: 0,
                 percent: 0
@@ -52,22 +52,22 @@ module MDashboard {
                 columns: [
                     {
                         field: 'name',
-                        title: 'CAPACITY NAME',
+                        title: '属性名称',
                         width: '25%'
                     },
                     {
                         field: 'total',
-                        title: 'TOTAL CAPACITY',
+                        title: '总量',
                         width: '25%'
                     },
                     {
                         field: 'available',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用量',
                         width: '25%'
                     },
                     {
                         field: 'percent',
-                        title: 'AVAILABLE PERCENTAGE',
+                        title: '可用比例',
                         width: '25%'
                     }
                 ],
@@ -131,87 +131,87 @@ module MDashboard {
             };
 
             var vm = new kendo.data.ObservableObject({
-                name: 'VM INSTANCE',
+                name: '虚拟机实例',
                 link: 'vmInstance',
                 amount: 0
             });
             var volume = new kendo.data.ObservableObject({
-                name: 'VOLUME',
+                name: '卷',
                 link: 'volume',
                 amount: 0
             });
             var securityGroup = new kendo.data.ObservableObject({
-                name: 'SECURITY GROUP',
+                name: '安全组',
                 link: 'securityGroup',
                 amount: 0
             });
             var eip = new kendo.data.ObservableObject({
-                name: 'EIP',
+                name: '弹性IP',
                 link: 'eip',
                 amount: 0
             });
             var portForwarding = new kendo.data.ObservableObject({
-                name: 'PORT FORWARDING',
+                name: '端口转发',
                 link: 'portForwarding',
                 amount: 0
             });
             var zone = new kendo.data.ObservableObject({
-                name: 'ZONE',
+                name: '域',
                 link: 'zone',
                 amount: 0
             });
             var cluster = new kendo.data.ObservableObject({
-                name: 'CLUSTER',
+                name: '集群',
                 link: 'cluster',
                 amount: 0
             });
             var host = new kendo.data.ObservableObject({
-                name: 'HOST',
+                name: '主机',
                 link: 'host',
                 amount: 0
             });
             var primaryStorage = new kendo.data.ObservableObject({
-                name: 'PRIMARY STORAGE',
+                name: '主存储',
                 link: 'primaryStorage',
                 amount: 0
             });
             var backupStorage = new kendo.data.ObservableObject({
-                name: 'BACKUP STORAGE',
+                name: '备份存储',
                 link: 'backupStorage',
                 amount: 0
             });
             var l2Network = new kendo.data.ObservableObject({
-                name: 'L2 NETWORK',
+                name: '二层网络',
                 link: 'l2Network',
                 amount: 0
             });
             var l3Network = new kendo.data.ObservableObject({
-                name: 'L3 NETWORK',
+                name: '三层网络',
                 link: 'l3Network',
                 amount: 0
             });
             var instanceOffering = new kendo.data.ObservableObject({
-                name: 'INSTANCE OFFERING',
+                name: '配置模板',
                 link: 'instanceOffering',
                 amount: 0
             });
             var diskOffering = new kendo.data.ObservableObject({
-                name: 'DISK OFFERING',
+                name: '磁盘模板',
                 link: 'diskOffering',
                 amount: 0
             });
             var vrOffering = new kendo.data.ObservableObject({
-                name: 'VIRTUAL ROUTER OFFERING',
+                name: '虚拟路由模板',
                 link: 'virtualRouterOffering',
                 amount: 0
             });
             var image = new kendo.data.ObservableObject({
-                name: 'IMAGE',
+                name: '镜像',
                 link: 'image',
                 amount: 0
             });
             var virtualRouter = new kendo.data.ObservableObject({
-                name: 'VIRTUAL ROUTER',
+                name: '虚拟路由',
                 link: 'virtualRouter',
                 amount: 0
             });
@@ -223,13 +223,13 @@ module MDashboard {
                 columns: [
                     {
                         field: 'name',
-                        title: 'RESOURCE NAME',
+                        title: '资源名称',
                         template: '<a href="/\\#/{{dataItem.link}}">{{dataItem.name}}</a>',
                         width: '50%'
                     },
                     {
                         field: 'amount',
-                        title: 'COUNT',
+                        title: '统计',
                         width: '50%'
                     }
                 ],
