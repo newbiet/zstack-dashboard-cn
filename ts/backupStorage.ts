@@ -247,13 +247,13 @@ module MBackupStorage {
       this.options.columns = [
         {
           field: 'name',
-          title: 'NAME',
+          title: '名称',
           width: '10%',
           template: '<a href="/\\#/backupStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
         },
         {
           field: 'description',
-          title: 'DESCRIPTION',
+          title: '描叙',
           width: '10%'
         },
         {
@@ -263,30 +263,30 @@ module MBackupStorage {
         },
         {
           field: 'totalCapacity',
-          title: 'TOTAL CAPACITY',
+          title: '总容量',
           width: '8%',
           template: '<span>{{dataItem.totalCapacity | size}}</span>'
         },
         {
           field: 'availableCapacity',
-          title: 'AVAILABLE CAPACITY',
+          title: '可用容量',
           width: '8%',
           template: '<span>{{dataItem.availableCapacity | size}}</span>'
         },
         {
           field: 'type',
-          title: 'TYPE',
+          title: '类型',
           width: '10%'
         },
         {
           field: 'state',
-          title: 'STATE',
+          title: '使用状态',
           width: '10%',
           template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
         },
         {
           field: 'status',
-          title: 'STATUS',
+          title: '连接状态',
           width: '10%',
           template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
         },
@@ -373,19 +373,19 @@ module MBackupStorage {
         dataSource: new kendo.data.DataSource({
           data: [
             {
-              name: 'None',
+              name: '不限',
               value: FilterBy.NONE
             },
             {
-              name: 'State',
+              name: '使用状态',
               value: FilterBy.STATE
             },
             {
-              name: 'Status',
+              name: '连接状态',
               value: FilterBy.STATUS
             },
             {
-              name: 'Type',
+              name: '类型',
               value: FilterBy.TYPE
             }
           ]
@@ -479,7 +479,7 @@ module MBackupStorage {
       };
 
       $scope.optionsDeleteBackupStorage = {
-        title: 'DELETE BACKUP STORAGE',
+        title: '删除备份存储',
         html: '<strong><p>Deleting Backup Storage will cause:</p></strong>' +
         '<ul><li><strong>Zones to which this backup storage has attached will be detached</strong></li>' +
         '<strong><p>those results are not recoverable</p></strong>',
@@ -548,18 +548,18 @@ module MBackupStorage {
         columns: [
           {
             field: 'name',
-            title: 'NAME',
+            title: '名称',
             width: '25%',
             template: '<a href="/\\#/zone/{{dataItem.uuid}}">{{dataItem.name}}</a>'
           },
           {
             field: 'description',
-            title: 'DESCRIPTION',
+            title: '描叙',
             width: '30%'
           },
           {
             field: 'state',
-            title: 'STATE',
+            title: '状态',
             width: '20%',
             template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
 
@@ -725,7 +725,7 @@ module MBackupStorage {
       };
 
       $scope.optionsDeleteBackupStorage = {
-        title: 'DELETE BACKUP STORAGE',
+        title: '删除备份存储',
         html: '<strong><p>Deleting Backup Storage will cause:</p></strong>' +
         '<ul><li><strong>Zones to which this backup storage has attached will be detached</strong></li>' +
         '<strong><p>those results are not recoverable</p></strong>',
@@ -1089,8 +1089,8 @@ module MBackupStorage {
           dataSource: new kendo.data.DataSource({data: []}),
           dataTextField: "name",
           dataValueField: "uuid",
-          itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
-          '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
+          itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
+          '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
           '<div style="color: black"><span class="z-label">URL:</span><span>#: url #</span></div>' +
           '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>'
         };
@@ -1156,7 +1156,7 @@ module MBackupStorage {
           dataSource: new kendo.data.DataSource({data: []}),
           dataTextField: "name",
           dataValueField: "uuid",
-          itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+          itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
           '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>',
 
           change: (e)=> {
@@ -1257,7 +1257,7 @@ module MBackupStorage {
           dataSource: new kendo.data.DataSource({data: []}),
           dataTextField: "name",
           dataValueField: "uuid",
-          itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+          itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
           '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>',
 
           change: (e)=> {

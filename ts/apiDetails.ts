@@ -93,18 +93,18 @@ module MApiDetails {
                 columns: [
                     {
                         field: 'success',
-                        title: 'SUCCESS',
+                        title: '成功',
                         width: '10%',
                         template: '<span class="label #= success ? \"label-success\" : \"label-danger\" #">#= success ? \"SUCCESS\" : \"FAILURE\" #</span>'
                     },
                     {
                         field: 'requestText',
-                        title: 'REQUEST',
+                        title: '请求',
                         width: '45%'
                     },
                     {
                         field: 'rspText',
-                        title: 'RESPONSE',
+                        title: '回复',
                         width: '45%'
                     }
                 ],

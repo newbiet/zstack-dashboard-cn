@@ -233,23 +233,23 @@ module MCluster {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '15%',
                     template: '<a href="/\\#/cluster/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描叙',
                     width: '25%'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '虚拟机监视器',
                     width: '15%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '15%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -323,15 +323,15 @@ module MCluster {
                 dataSource: new kendo.data.DataSource({
                     data: [
                         {
-                            name: 'None',
+                            name: '不限',
                             value: FilterBy.NONE
                         },
                         {
-                            name: 'State',
+                            name: '状态',
                             value: FilterBy.STATE
                         },
                         {
-                            name: 'Hypervisor',
+                            name: '虚拟机监视器',
                             value: FilterBy.HYPERVISOR
                         }
                     ]
@@ -354,7 +354,7 @@ module MCluster {
                     this.valueList.dataSource.data([]);
                     this.value = null;
                 } else if (this.field == FilterBy.STATE) {
-                    this.valueList.dataSource.data(['Enabled', 'Disabled']);
+                    this.valueList.dataSource.data(['可用', '不可用']);
                 } else if (this.field == FilterBy.HYPERVISOR) {
                     this.valueList.dataSource.data(this.hypervisorTypes);
                 }
@@ -426,7 +426,7 @@ module MCluster {
             };
 
             $scope.optionsDeleteCluster = {
-                title: 'DELETE CLUSTER',
+                title: '删除集群',
                 description: 'Deleting cluster will cause all sub resources(e.g Host, VM) being deleted and no way to recover',
                 confirm: ()=> {
                     clusterMgr.delete($scope.model.current, (ret : any)=> {
@@ -520,18 +520,18 @@ module MCluster {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '25%',
                         template: '<a href="/\\#/host/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描叙',
                         width: '25%'
                     },
                     {
                         field: 'managementIp',
-                        title: 'MANAGEMENT IP',
+                        title: '管理 IP',
                         width: '25%'
                     },
                     {
@@ -591,23 +591,23 @@ module MCluster {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/l2Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描叙',
                         width: '25%'
                     },
                     {
                         field: 'physicalInterface',
-                        title: 'PHYSICAL INTERFACE',
+                        title: '物理接口',
                         width: '25%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
@@ -671,13 +671,13 @@ module MCluster {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/primaryStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描叙',
                         width: '15%'
                     },
                     {
@@ -687,22 +687,22 @@ module MCluster {
                     },
                     {
                         field: 'totalCapacity',
-                        title: 'TOTAL CAPACITY',
+                        title: '总容量',
                         width: '8%'
                     },
                     {
                         field: 'availableCapacity',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用容量',
                         width: '8%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '10%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '状态',
                         width: '15%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
@@ -884,7 +884,7 @@ module MCluster {
             };
 
             $scope.optionsDeleteCluster = {
-                title: 'DELETE CLUSTER',
+                title: '删除集群',
                 description: 'Deleting cluster will cause all sub resources(e.g Host, VM) being deleted and no way to recover',
                 confirm: ()=> {
                     clusterMgr.delete($scope.model.current, (ret : any)=> {
@@ -1219,7 +1219,7 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    template: "<div style='color: black'><span class='z-label'>Name</span>: #: name #</div><div style='color: black'><span class='z-label'>State:</span>#: state #</div><div style='color: black'><span class='z-label'>UUID:</span> #: uuid #</div>"
+                    template: "<div style='color: black'><span class='z-label'>名称</span>: #: name #</div><div style='color: black'><span class='z-label'>状态:</span>#: state #</div><div style='color: black'><span class='z-label'>UUID:</span> #: uuid #</div>"
                 };
 
                 $scope.hypervisorList = {
@@ -1241,9 +1241,9 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+                    itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
                         '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
+                        '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
                         '<div style="color: black"><span class="z-label">URL:</span><span>#: url #</span></div>'
                 };
 
@@ -1251,10 +1251,10 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+                    itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
                         '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Physical Interface:</span><span>#: physicalInterface #</span></div>'
+                        '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
+                        '<div style="color: black"><span class="z-label">物理接口:</span><span>#: physicalInterface #</span></div>'
                 };
 
                 this.$scope = $scope;
@@ -1333,10 +1333,10 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+                    itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
                         '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Physical Interface:</span><span>#: physicalInterface #</span></div>',
+                        '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
+                        '<div style="color: black"><span class="z-label">物理接口:</span><span>#: physicalInterface #</span></div>',
 
                     change: (e)=> {
                         var select = e.sender;
@@ -1437,10 +1437,10 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+                    itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
                         '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Physical Interface:</span><span>#: physicalInterface #</span></div>',
+                        '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
+                        '<div style="color: black"><span class="z-label">物理接口:</span><span>#: physicalInterface #</span></div>',
 
                     change: (e)=> {
                         var select = e.sender;
@@ -1552,9 +1552,9 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+                    itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
                         '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
+                        '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
                         '<div style="color: black"><span class="z-label">URL:</span><span>#: url #</span></div>',
 
                     change: (e)=> {
@@ -1657,9 +1657,9 @@ module MCluster {
                     dataSource: new kendo.data.DataSource({data: []}),
                     dataTextField: "name",
                     dataValueField: "uuid",
-                    itemTemplate: '<div style="color: black"><span class="z-label">Name:</span><span>#: name #</span></div>' +
+                    itemTemplate: '<div style="color: black"><span class="z-label">名称:</span><span>#: name #</span></div>' +
                         '<div style="color: black"><span class="z-label">UUID:</span><span>#: uuid #</span></div>' +
-                        '<div style="color: black"><span class="z-label">Type:</span><span>#: type #</span></div>' +
+                        '<div style="color: black"><span class="z-label">类型:</span><span>#: type #</span></div>' +
                         '<div style="color: black"><span class="z-label">URL:</span><span>#: url #</span></div>',
 
                     change: (e)=> {
