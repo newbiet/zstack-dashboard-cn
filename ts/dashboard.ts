@@ -1,4 +1,4 @@
-/// <reference path="d.ts/angularjs/angular.d.ts" />
+﻿/// <reference path="d.ts/angularjs/angular.d.ts" />
 /// <reference path="d.ts/kendo.all.d.ts" />
 
 module MDashboard {
@@ -15,7 +15,7 @@ module MDashboard {
 
         constructor(private $scope : any, private api : Utils.Api, private $location : ng.ILocationService, private zoneMgr: MZone.ZoneManager) {
             var cpu = new kendo.data.ObservableObject({
-                name: '处理器',
+                name: 'CPU',
                 total: 0,
                 available: 0,
                 percent: 0
