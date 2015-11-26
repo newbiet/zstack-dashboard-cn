@@ -385,7 +385,7 @@ module ML3Network {
                             value: FilterBy.TYPE
                         },
                         {
-                            name: '状态',
+                            name: '使用状态',
                             value: FilterBy.STATE
                         }
                     ]
@@ -732,7 +732,7 @@ module ML3Network {
                         value: 'description'
                     },
                     {
-                        name: '状态',
+                        name: '使用状态',
                         value: 'state'
                     },
                     {
@@ -757,7 +757,7 @@ module ML3Network {
 
             $scope.optionsSearch = {
                 fields: ApiHeader.L3NetworkInventoryQueryable,
-                name: '三级网络',
+                name: '三层网络',
                 schema: {
                     type: {
                         type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
@@ -803,7 +803,7 @@ module ML3Network {
             };
 
             $scope.optionsDeleteL3Network = {
-                title: '删除三级网络',
+                title: '删除三层网络',
                 html: '<strong><p>Deleting L2 Network will cause:</p></strong>' +
                     '<ul><li><strong>Ip ranges on this l3Network will be deleted</strong></li>' +
                     '<li><strong>DNS on this l3Network will be deleted</strong></li>' +
