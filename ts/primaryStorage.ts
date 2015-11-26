@@ -279,13 +279,13 @@ module MPrimaryStorage {
         },
         {
           field: 'state',
-          title: '状态',
+          title: '使用状态',
           width: '10%',
           template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
         },
         {
           field: 'status',
-          title: '状态',
+          title: '连接状态',
           width: '10%',
           template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
         },
@@ -551,7 +551,7 @@ module MPrimaryStorage {
           },
           {
             field: 'hypervisorType',
-            title: '虚拟机管理程序',
+            title: '虚拟机监视器',
             width: '20%'
           },
           {
