@@ -404,7 +404,7 @@ module ML2Network {
                     },
                     {
                         field: 'state',
-                        title: '状态',
+                        title: '使用状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
 
@@ -509,7 +509,7 @@ module ML2Network {
 
             $scope.optionsSearch = {
                 fields: ApiHeader.L2NetworkInventoryQueryable,
-                name: '二级网络',
+                name: '二层网络',
                 schema: {
                     type: {
                         type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
