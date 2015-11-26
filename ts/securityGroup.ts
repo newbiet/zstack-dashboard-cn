@@ -628,7 +628,7 @@ module MSecurityGroup {
                     },
                     {
                         field: 'protocol',
-                        title: 'PROTOCOL',
+                        title: '协议',
                         width: '20%'
                     },
                     {
@@ -663,7 +663,7 @@ module MSecurityGroup {
                     },
                     {
                         field: 'deviceId',
-                        title: '装置ID',
+                        title: '设备ID',
                         width: '25%'
                     },
                     {
