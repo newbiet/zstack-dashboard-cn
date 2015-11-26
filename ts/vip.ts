@@ -168,45 +168,45 @@ module MVip {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/vip/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '启用状态',
                     width: '6%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'ip',
-                    title: 'IP',
+                    title: 'IP地址',
                     width: '14%'
                 },
                 {
                     field: 'netmask',
-                    title: 'NETMASK',
+                    title: '子网掩码',
                     width: '14%'
                 },
                 {
                     field: 'gateway',
-                    title: 'GATEWAY',
+                    title: '网关',
                     width: '14%'
                 },
                 {
                     field: 'l3NetworkUuid',
-                    title: 'L3 NETWORK UUID',
+                    title: 'L3 网络 UUID',
                     width: '%14',
                     template: '<a href="/\\#/l3Network/{{dataItem.l3NetworkUuid}}">{{dataItem.l3NetworkUuid}}</a>'
                 },
                 {
                     field: 'useFor',
-                    title: 'USE',
+                    title: '使用者',
                     width: '14%'
                 },
                 {
                     field: 'serviceProvider',
-                    title: 'SERVICE PROVIDER',
+                    title: '服务提供者',
                     width: '14%'
                 }
             ];
@@ -347,7 +347,7 @@ module MVip {
             };
 
             $scope.optionsDeleteVip = {
-                title: 'DELETE VIP',
+                title: '删除虚拟IP',
                 description: 'Deleting will delete all network services that this VIP is used for. For example, if the VIP is used for EIP, the EIP will be deleted as well',
                 confirm: ()=> {
                     vipMgr.delete($scope.model.current, (ret : any)=> {
@@ -487,7 +487,7 @@ module MVip {
             };
 
             $scope.optionsDeleteVip = {
-                title: 'DELETE VIP',
+                title: '删除虚拟IP',
                 description: 'Deleting will delete all network services that this VIP is used for. For example, if the VIP is used for EIP, the EIP will be deleted as well',
 
                 confirm: ()=> {

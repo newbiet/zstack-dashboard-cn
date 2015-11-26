@@ -245,7 +245,7 @@ module MZone {
                         $scope.model.current = null;
                     });
                 },
-                title: 'DELETE ZONE',
+                title: '删除域',
                 description: 'Deleting zone will cause all sub resources(e.g Cluster, Host, VM) being deleted and no way to recover'
             };
 
@@ -264,25 +264,25 @@ module MZone {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '20%',
                         template: '<a href="/\\#/cluster/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '20%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '启用状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
 
                     },
                     {
                         field: 'hypervisorType',
-                        title: 'HYPERVISOR',
+                        title: '虚拟机管理程序',
                         width: '20%'
                     },
                     {
@@ -323,13 +323,13 @@ module MZone {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称      ',
                         width: '10%',
                         template: '<a href="/\\#/primaryStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '15%'
                     },
                     {
@@ -339,17 +339,17 @@ module MZone {
                     },
                     {
                         field: 'totalCapacity',
-                        title: 'TOTAL CAPACITY',
+                        title: '总容量',
                         width: '8%'
                     },
                     {
                         field: 'availableCapacity',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用容量',
                         width: '8%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '10%'
                     },
                     {
@@ -415,23 +415,23 @@ module MZone {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/l2Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '25%'
                     },
                     {
                         field: 'physicalInterface',
-                        title: 'PHYSICAL INTERFACE',
+                        title: '物理接口',
                         width: '25%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
@@ -514,34 +514,34 @@ module MZone {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%',
                         template: '<a href="/\\#/backupStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'totalCapacity',
-                        title: 'TOTAL CAPACITY',
+                        title: '总容量',
                         width: '10%'
                     },
                     {
                         field: 'availableCapacity',
-                        title: 'AVAILABLE CAPACITY',
+                        title: '可用容量',
                         width: '10%'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '10%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '启用状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
                     {
                         field: 'status',
-                        title: 'STATUS',
+                        title: '连接状态',
                         width: '20%',
                         template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                     },
@@ -745,7 +745,7 @@ module MZone {
                         $scope.optionsZoneGrid.dataSource.remove(row);
                     });
                 },
-                title: 'DELETE ZONE',
+                title: '删除域',
                 description: 'Deleting zone will cause all sub resources(e.g Cluster, Host, VM) being deleted and no way to recover'
             };
 
@@ -801,18 +801,18 @@ module MZone {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '20%',
                         template: '<span><div class="{{dataItem.gridColumnLabel()}}"></div><i class="fa fa-spinner fa-spin" ng-show="dataItem.isInProgress()"></i><a href="/\\#/zone/{{dataItem.uuid}}"><span>#: name #</span></a></span>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '30%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '启用状态',
                         width: '20%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
