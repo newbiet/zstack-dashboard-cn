@@ -215,34 +215,34 @@ module MHost {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '10%',
                     template: '<a href="/\\#/host/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'managementIp',
-                    title: 'MANAGEMENT IP',
+                    title: '管理节点IP',
                     width: '15%'
                 },
                 {
                     field: 'hypervisorType',
-                    title: 'HYPERVISOR',
+                    title: '虚拟机监视器',
                     width: '15%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '运行状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'status',
-                    title: 'STATUS',
+                    title: '连接状态',
                     width: '10%',
                     template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
                 },
@@ -420,7 +420,7 @@ module MHost {
             };
 
             $scope.optionsDeleteHost = {
-                title: 'DELETE HOST',
+                title: '删除主机',
                 description: "Deleting Host will cause all VMs on this host being stopped",
                 confirm: ()=> {
                     hostMgr.delete($scope.model.current, (ret : any)=> {
@@ -560,7 +560,7 @@ module MHost {
             };
 
             $scope.optionsDeleteHost = {
-                title: 'DELETE HOST',
+                title: '删除主机',
                 description: "Deleting Host will cause all VMs on this host being stopped",
 
                 confirm: ()=> {
