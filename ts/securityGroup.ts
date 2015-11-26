@@ -274,18 +274,18 @@ module MSecurityGroup {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '25%',
                     template: '<a href="/\\#/securityGroup/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '25%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '25%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
@@ -369,11 +369,11 @@ module MSecurityGroup {
                 dataSource: new kendo.data.DataSource({
                     data: [
                         {
-                            name: 'None',
+                            name: '无',
                             value: FilterBy.NONE
                         },
                         {
-                            name: 'State',
+                            name: '状态',
                             value: FilterBy.STATE
                         }
                     ]
@@ -463,7 +463,7 @@ module MSecurityGroup {
             };
 
             $scope.optionsDeleteSecurityGroup = {
-                title: 'DELETE SECURITY GROUP',
+                title: '删除安全组',
                 html: '<strong><p>Deleting security group will cause:</p></strong>' +
                     '<ul><li><strong>All rules in this security group will be deleted</strong></li>' +
                     '<li><strong>All l3Networks this security group has attached will be detached</strong></li>' +
@@ -507,28 +507,28 @@ module MSecurityGroup {
                 columns: [
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
                         field: 'startPort',
-                        title: 'PORT START',
+                        title: '起始端口',
                         width: '20%'
 
                     },
                     {
                         field: 'endPort',
-                        title: 'PORT END',
+                        title: '终止端口',
                         width: '20%'
                     },
                     {
                         field: 'protocol',
-                        title: 'PROTOCOL',
+                        title: '协议',
                         width: '20%'
                     },
                     {
                         field: 'allowedCidr',
-                        title: 'ALLOWED CIDR',
+                        title: 'CIDR许可',
                         width: '20%'
                     }
                 ],
@@ -553,24 +553,24 @@ module MSecurityGroup {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '20%',
                         template: '<a href="/\\#/l3Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                     },
                     {
                         field: 'description',
-                        title: 'DESCRIPTION',
+                        title: '描述',
                         width: '25%'
                     },
                     {
                         field: 'state',
-                        title: 'STATE',
+                        title: '状态',
                         width: '10%',
                         template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                     },
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
@@ -613,17 +613,17 @@ module MSecurityGroup {
                 columns: [
                     {
                         field: 'type',
-                        title: 'TYPE',
+                        title: '类型',
                         width: '20%'
                     },
                     {
                         field: 'startPort',
-                        title: 'PORT START',
+                        title: '起始端口',
                         width: '20%'
                     },
                     {
                         field: 'endPort',
-                        title: 'PORT END',
+                        title: '终止端口',
                         width: '20%'
                     },
                     {
@@ -633,7 +633,7 @@ module MSecurityGroup {
                     },
                     {
                         field: 'allowedCidr',
-                        title: 'ALLOWED CIDR',
+                        title: 'CIDR许可',
                         width: '20%'
                     }
                 ],
@@ -663,7 +663,7 @@ module MSecurityGroup {
                     },
                     {
                         field: 'deviceId',
-                        title: 'DEBICE ID',
+                        title: '装置ID',
                         width: '25%'
                     },
                     {
@@ -674,7 +674,7 @@ module MSecurityGroup {
                     },
                     {
                         field: 'vmInstanceUuid',
-                        title: 'VM',
+                        title: '虚拟机',
                         width: '25%',
                         template: '<a href="/\\#/vmInstance/{{dataItem.vmInstanceUuid}}">{{dataItem.vmInstanceUuid}}</a>'
                     }
@@ -790,23 +790,23 @@ module MSecurityGroup {
             $scope.optionsSortBy = {
                 fields: [
                     {
-                        name: 'Name',
+                        name: '名称',
                         value: 'name'
                     },
                     {
-                        name: 'Description',
+                        name: '描述',
                         value: 'description'
                     },
                     {
-                        name: 'State',
+                        name: '状态',
                         value: 'state'
                     },
                     {
-                        name: 'Created Date',
+                        name: '创建日期',
                         value: 'createDate'
                     },
                     {
-                        name: 'Last Updated Date',
+                        name: '最后更新日期',
                         value: 'lastOpDate'
                     }
                 ],
@@ -819,7 +819,7 @@ module MSecurityGroup {
 
             $scope.optionsSearch = {
                 fields: ApiHeader.SecurityGroupInventoryQueryable,
-                name: 'SecurityGroup',
+                name: '安全组',
                 schema: {
                     state: {
                         type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
@@ -865,7 +865,7 @@ module MSecurityGroup {
             };
 
             $scope.optionsDeleteSecurityGroup = {
-                title: 'DELETE L3 NETWORK',
+                title: '删除三级网络',
                 html: '<strong><p>Deleting security group will cause:</p></strong>' +
                     '<ul><li><strong>All rules in this security group will be deleted</strong></li>' +
                     '<li><strong>All l3Networks this security group has attached will be detached</strong></li>' +
@@ -972,29 +972,29 @@ module MSecurityGroup {
                     columns: [
                         {
                             field: 'startPort',
-                            title: 'START',
+                            title: '启动',
                             width: '13%'
                         },
                         {
                             field: 'endPort',
-                            title: 'END',
+                            title: '终止',
                             width: '13%'
                         },
                         {
                             field: 'type',
-                            title: 'TYPE',
+                            title: '类型',
                             width: '16%'
 
                         },
                         {
                             field: 'protocol',
-                            title: 'PROTOCOL',
+                            title: '协议',
                             width: '16%'
 
                         },
                         {
                             field: 'allowedCidr',
-                            title: 'ALLOWED CIDR',
+                            title: 'CIDR许可',
                             width: '22%'
                         },
                         {
@@ -1491,29 +1491,29 @@ module MSecurityGroup {
                     columns: [
                         {
                             field: 'startPort',
-                            title: 'START',
+                            title: '启动',
                             width: '16%'
                         },
                         {
                             field: 'endPort',
-                            title: 'END',
+                            title: '终止',
                             width: '16%'
                         },
                         {
                             field: 'type',
-                            title: 'TYPE',
+                            title: '类型',
                             width: '16%'
 
                         },
                         {
                             field: 'protocol',
-                            title: 'PROTOCOL',
+                            title: '协议',
                             width: '16%'
 
                         },
                         {
                             field: 'allowedCidr',
-                            title: 'ALLOWED CIDR',
+                            title: 'CIDR许可',
                             width: '16%'
                         },
                         {
@@ -1596,29 +1596,29 @@ module MSecurityGroup {
                         },
                         {
                             field: 'startPort',
-                            title: 'START',
+                            title: '启动',
                             width: '16%'
                         },
                         {
                             field: 'endPort',
-                            title: 'END',
+                            title: '终止',
                             width: '16%'
                         },
                         {
                             field: 'type',
-                            title: 'TYPE',
+                            title: '类型',
                             width: '16%'
 
                         },
                         {
                             field: 'protocol',
-                            title: 'PROTOCOL',
+                            title: '协议',
                             width: '16%'
 
                         },
                         {
                             field: 'allowedCidr',
-                            title: 'ALLOWED CIDR',
+                            title: 'CIDR许可',
                             width: '16%'
                         }
                     ],

@@ -246,46 +246,46 @@ module MPrimaryStorage {
       this.options.columns = [
         {
           field: 'name',
-          title: 'NAME',
+          title: '名称',
           width: '10%',
           template: '<a href="/\\#/primaryStorage/{{dataItem.uuid}}">{{dataItem.name}}</a>'
         },
         {
           field: 'description',
-          title: 'DESCRIPTION',
+          title: '描述',
           width: '10%'
         },
         {
           field: 'url',
-          title: 'URL',
+          title: '网址',
           width: '16%'
         },
         {
           field: 'totalCapacity',
-          title: 'TOTAL CAPACITY',
+          title: '总容量',
           width: '8%',
           template: '<span>{{dataItem.totalCapacity | size}}</span>'
         },
         {
           field: 'availableCapacity',
-          title: 'AVAILABLE CAPACITY',
+          title: '可用容量',
           width: '8%',
           template: '<span>{{dataItem.availableCapacity | size}}</span>'
         },
         {
           field: 'type',
-          title: 'TYPE',
+          title: '类型',
           width: '10%'
         },
         {
           field: 'state',
-          title: 'STATE',
+          title: '状态',
           width: '10%',
           template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
         },
         {
           field: 'status',
-          title: 'STATE',
+          title: '状态',
           width: '10%',
           template: '<span class="{{dataItem.statusLabel()}}">{{dataItem.status}}</span>'
         },
@@ -363,15 +363,15 @@ module MPrimaryStorage {
         dataSource: new kendo.data.DataSource({
           data: [
             {
-              name: 'None',
+              name: '无',
               value: FilterBy.NONE
             },
             {
-              name: 'State',
+              name: '状态',
               value: FilterBy.STATE
             },
             {
-              name: 'Type',
+              name: '类型',
               value: FilterBy.TYPE
             }
           ]
@@ -463,7 +463,7 @@ module MPrimaryStorage {
       };
 
       $scope.optionsDeletePrimaryStorage = {
-        title: 'DELETE PRIMARY STORAGE',
+        title: '删除主存储器',
         html: '<strong><p>Deleting Primary Storage will cause:</p></strong>' +
         '<ul><li><strong>Clusters to which this primary storage has attached will be detached</strong></li>' +
         '<li><strong>VMs which has volumes on this primary storage will be deleted</strong></li></ul>' +
@@ -533,25 +533,25 @@ module MPrimaryStorage {
         columns: [
           {
             field: 'name',
-            title: 'NAME',
+            title: '名称',
             width: '20%',
             template: '<a href="/\\#/cluster/{{dataItem.uuid}}">{{dataItem.name}}</a>'
           },
           {
             field: 'description',
-            title: 'DESCRIPTION',
+            title: '描述',
             width: '20%'
           },
           {
             field: 'state',
-            title: 'STATE',
+            title: '状态',
             width: '20%',
             template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
 
           },
           {
             field: 'hypervisorType',
-            title: 'HYPERVISOR',
+            title: '虚拟机管理程序',
             width: '20%'
           },
           {
@@ -616,35 +616,35 @@ module MPrimaryStorage {
       $scope.optionsSortBy = {
         fields: [
           {
-            name: 'Name',
+            name: '名称',
             value: 'name'
           },
           {
-            name: 'Description',
+            name: '描述',
             value: 'Description'
           },
           {
-            name: 'State',
+            name: '状态',
             value: 'state'
           },
           {
-            name: 'Total Capacity',
+            name: '总容量',
             value: 'totalCapacity'
           },
           {
-            name: 'Available Capacity',
+            name: '可用容量',
             value: 'availableCapacity'
           },
           {
-            name: 'Type',
+            name: '类型',
             value: 'type'
           },
           {
-            name: 'Created Date',
+            name: '创建日期',
             value: 'createDate'
           },
           {
-            name: 'Last Updated Date',
+            name: '最后更新日期',
             value: 'lastOpDate'
           }
         ],
@@ -657,7 +657,7 @@ module MPrimaryStorage {
 
       $scope.optionsSearch = {
         fields: ApiHeader.PrimaryStorageInventoryQueryable,
-        name: 'PrimaryStorage',
+        name: '主存储器',
         schema: {
           state: {
             type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
@@ -707,7 +707,7 @@ module MPrimaryStorage {
       };
 
       $scope.optionsDeletePrimaryStorage = {
-        title: 'DELETE PRIMARY STORAGE',
+        title: '删除主存储器',
         html: '<strong><p>Deleting Primary Storage will cause:</p></strong>' +
         '<ul><li><strong>Clusters to which this primary storage has attached will be detached</strong></li>' +
         '<li><strong>VMs which has volumes on this primary storage will be deleted</strong></li></ul>' +
@@ -783,7 +783,7 @@ module MPrimaryStorage {
       var qobj = new ApiHeader.QueryObject();
       qobj.conditions = [
         {
-          name: 'zoneUuid',
+          name: '域的Uuid',
           op: '=',
           value: zoneUuid
         }
@@ -1156,7 +1156,7 @@ module MPrimaryStorage {
             value: this.options.primaryStorage.attachedClusterUuids.join()
           },
           {
-            name: 'zoneUuid',
+            name: '域的Uuid',
             op: '=',
             value: this.options.primaryStorage.zoneUuid
           }

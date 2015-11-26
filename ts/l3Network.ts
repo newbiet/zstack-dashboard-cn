@@ -285,29 +285,29 @@ module ML3Network {
             this.options.columns = [
                 {
                     field: 'name',
-                    title: 'NAME',
+                    title: '名称',
                     width: '15%',
                     template: '<a href="/\\#/l3Network/{{dataItem.uuid}}">{{dataItem.name}}</a>'
                 },
                 {
                     field: 'description',
-                    title: 'DESCRIPTION',
+                    title: '描述',
                     width: '20%'
                 },
                 {
                     field: 'state',
-                    title: 'STATE',
+                    title: '状态',
                     width: '10%',
                     template: '<span class="{{dataItem.stateLabel()}}">{{dataItem.state}}</span>'
                 },
                 {
                     field: 'type',
-                    title: 'TYPE',
+                    title: '类型',
                     width: '15%'
                 },
                 {
                     field: 'system',
-                    title: 'SYSTEM NETWORK',
+                    title: '系统网络',
                     width: '15%',
                     template: '<span class="{{dataItem.systemLabel()}}">{{dataItem.system ? "TRUE" : "" }}</span>'
                 },
@@ -377,15 +377,15 @@ module ML3Network {
                 dataSource: new kendo.data.DataSource({
                     data: [
                         {
-                            name: 'None',
+                            name: '无',
                             value: FilterBy.NONE
                         },
                         {
-                            name: 'Type',
+                            name: '类型',
                             value: FilterBy.TYPE
                         },
                         {
-                            name: 'State',
+                            name: '使用状态',
                             value: FilterBy.STATE
                         }
                     ]
@@ -477,7 +477,7 @@ module ML3Network {
             };
 
             $scope.optionsDeleteL3Network = {
-                title: 'DELETE L3 NETWORK',
+                title: '删除三级网络',
                 html: '<strong><p>Deleting L2 Network will cause:</p></strong>' +
                     '<ul><li><strong>Ip ranges on this l3Network will be deleted</strong></li>' +
                     '<li><strong>DNS on this l3Network will be deleted</strong></li>' +
@@ -522,33 +522,33 @@ module ML3Network {
                 columns: [
                     {
                         field: 'name',
-                        title: 'NAME',
+                        title: '名称',
                         width: '10%'
                     },
                     {
                         field: 'startIp',
-                        title: 'START IP',
+                        title: '起始IP',
                         width: '18%'
 
                     },
                     {
                         field: 'endIp',
-                        title: 'END IP',
+                        title: '截止IP',
                         width: '18%'
                     },
                     {
                         field: 'netmask',
-                        title: 'NETMASK',
+                        title: '子网掩码',
                         width: '18%'
                     },
                     {
                         field: 'gateway',
-                        title: 'GATEWAY',
+                        title: '网关',
                         width: '18%'
                     },
                     {
                         field: 'networkCidr',
-                        title: 'NETWORK CIDR',
+                        title: '网络CIDR',
                         width: '18%'
                     }
                 ],
@@ -573,7 +573,7 @@ module ML3Network {
                 columns: [
                     {
                         field: 'dns',
-                        title: 'DNS',
+                        title: '域名服务器',
                         width: '100%'
                     }
                 ],
@@ -604,12 +604,12 @@ module ML3Network {
                 columns: [
                     {
                         field: 'service',
-                        title: 'SERVICE',
+                        title: '服务',
                         width: '50%'
                     },
                     {
                         field: 'provider',
-                        title: 'PROVIDER',
+                        title: '供应商',
                         width: '50%'
                     }
                 ],
@@ -724,27 +724,27 @@ module ML3Network {
             $scope.optionsSortBy = {
                 fields: [
                     {
-                        name: 'Name',
+                        name: '名称',
                         value: 'name'
                     },
                     {
-                        name: 'Description',
+                        name: '描述',
                         value: 'description'
                     },
                     {
-                        name: 'State',
+                        name: '使用状态',
                         value: 'state'
                     },
                     {
-                        name: 'Type',
+                        name: '类型',
                         value: 'type'
                     },
                     {
-                        name: 'Created Date',
+                        name: '创建日期',
                         value: 'createDate'
                     },
                     {
-                        name: 'Last Updated Date',
+                        name: '最后更新日期',
                         value: 'lastOpDate'
                     }
                 ],
@@ -757,7 +757,7 @@ module ML3Network {
 
             $scope.optionsSearch = {
                 fields: ApiHeader.L3NetworkInventoryQueryable,
-                name: 'L3Network',
+                name: '三层网络',
                 schema: {
                     type: {
                         type: Directive.SearchBoxSchema.VALUE_TYPE_LIST,
@@ -803,7 +803,7 @@ module ML3Network {
             };
 
             $scope.optionsDeleteL3Network = {
-                title: 'DELETE L3 NETWORK',
+                title: '删除三层网络',
                 html: '<strong><p>Deleting L2 Network will cause:</p></strong>' +
                     '<ul><li><strong>Ip ranges on this l3Network will be deleted</strong></li>' +
                     '<li><strong>DNS on this l3Network will be deleted</strong></li>' +
@@ -1007,10 +1007,10 @@ module ML3Network {
                 $scope.methodOptions__ = {
                     dataSource: new kendo.data.DataSource({
                         data: [{
-                            name: "Add By CIDR",
+                            name: "通过CIDR添加",
                             field: "cidr"
                         },{
-                            name: "Add By IP Range",
+                            name: "通过IP Range添加",
                             field: "range"
                         }]
                     }),
@@ -1143,7 +1143,7 @@ module ML3Network {
             var qobj = new ApiHeader.QueryObject();
             qobj.conditions = [
                 {
-                    name: 'zoneUuid',
+                    name: '域的Uuid',
                     op: '=',
                     value: zoneUuid
                 }
@@ -1665,10 +1665,10 @@ module ML3Network {
                 $scope.methodOptions__ = {
                     dataSource: new kendo.data.DataSource({
                         data: [{
-                            name: "Add By CIDR",
+                            name: "通过CIDR添加",
                             field: "cidr"
                         },{
-                            name: "Add By IP Range",
+                            name: "通过IP Range添加",
                             field: "range"
                         }]
                     }),
@@ -1716,17 +1716,17 @@ module ML3Network {
                         },
                         {
                             field: 'startIp',
-                            title: 'START IP',
+                            title: '起始IP',
                             width: '22%'
                         },
                         {
                             field: 'endIp',
-                            title: 'END IP',
+                            title: '终止IP',
                             width: '22%'
                         },
                         {
                             field: 'gateway',
-                            title: 'GATEWAY',
+                            title: '网关',
                             width: '22%'
                         }
                     ],
@@ -1749,7 +1749,7 @@ module ML3Network {
                     columns: [
                         {
                             field: 'dns',
-                            title: 'DNS',
+                            title: '域名服务器',
                             width: '80%'
                         },
                         {
@@ -1787,12 +1787,12 @@ module ML3Network {
                     columns: [
                         {
                             field: 'providerName',
-                            title: 'PROVIDER',
+                            title: '供应商',
                             width: '40%'
                         },
                         {
                             field: 'serviceType',
-                            title: 'SERVICE',
+                            title: '服务',
                             width: '40%'
                         },
                         {
