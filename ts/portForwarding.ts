@@ -990,7 +990,7 @@ module MPortForwarding {
                             name: "创建新的虚拟IP",
                             field: CreatePortForwarding.CREATE_NEW_VIP
                         },{
-                            name: "使用现有的虚拟IP",
+                            name: "使用已有的虚拟IP",
                             field: CreatePortForwarding.USE_EXISTING_VIP
                         }]
                     }),
