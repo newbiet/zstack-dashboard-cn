@@ -102,16 +102,16 @@
 "vm.createVm.HOST": "云主机",
 "vm.createVm.Previous": "上一页",
 "vm.createVm.VM INSTANCE INFO": "云主机信息",
-"vm.createVm.LOCATION": "位置"
+"vm.createVm.LOCATION": "位置",
 "vm.changeInstanceOffering.CHANGE INSTANCE OFFERING": "变化实例提供",
 "vm.changeInstanceOffering.INSTANCE OFFERING": "实例提供",
 "vm.changeInstanceOffering.Cancel": "取消",
-"vm.changeInstanceOffering.Change": "变化"
+"vm.changeInstanceOffering.Change": "变化",
 "vm.attachVolume.ATTACH DATA VOLUME": "附加数据卷",
 "vm.attachVolume.DATA VOLUME": "数据卷",
 "vm.attachVolume.HINT": "(必需的) 在这里列出卷可以附加到此 vm 的候选人",
 "vm.attachVolume.Cancel": "取消",
-"vm.attachVolume.Attach": "附加"
+"vm.attachVolume.Attach": "附加",
 "vm.attachL3Network.ATTACH L3 NETWORK": "附加 L3 网络",
 "vm.attachL3Network.L3 NETWORKS": "L3 网络",
 "vm.attachL3Network.HINT": "在这里列出的 (必选) L3 网络是可以附加到此 vm 的候选人",
@@ -135,7 +135,7 @@
 "host.details.Action": "操作",
 "host.details.Enable": "启用",
 "host.details.Disable": "禁用",
-"host.details.Reconnect": "重新连接"
+"host.details.Reconnect": "重新连接",
 "host.details.Enter Maintenance Mode": "进入维护模式",
 "host.details.Delete": "删除",
 "host.details.Info": "信息",
@@ -159,7 +159,7 @@
 "host.host.Action": "操作",
 "host.host.Enable": "启用",
 "host.host.Disable": "禁用",
-"host.host.Reconnect": "重新连接"
+"host.host.Reconnect": "重新连接",
 "host.host.Enter Maintenance Mode": "进入维护模式",
 "host.host.Delete": "删除",
 "host.host.HINT": "单点击列来显示操作按钮",
@@ -171,7 +171,7 @@
 "cluster.attachL2Network.L2 NETWORK": "L2 网络",
 "cluster.attachL2Network.HINT": "(必填) 选择一个或多个 l2Network 附加",
 "cluster.attachL2Network.Cancel": "取消",
-"cluster.attachL2Network.Attach": "附加"
+"cluster.attachL2Network.Attach": "附加",
 "cluster.attachPrimaryStorage.hasPrimaryStorage()": "无主存储已被添加.请转到",
 "cluster.attachPrimaryStorage.primary storage": "主存储",
 "cluster.attachPrimaryStorage.hasPrimaryStorage2()": "要添加一个新",
@@ -179,7 +179,7 @@
 "cluster.attachPrimaryStorage.PRIMARY STORAGE": "主存储",
 "cluster.attachPrimaryStorage.HINT": "(必填) 选择一个或多个主存储的群集的连接",
 "cluster.attachPrimaryStorage.Cancel": "取消",
-"cluster.attachPrimaryStorage.Attach": "附加"
+"cluster.attachPrimaryStorage.Attach": "附加",
 "cluster.cluster.CLUSTER": "集群",
 "cluster.cluster.New Cluster": "新群集",
 "cluster.cluster.FILTER BY": "过滤",
@@ -206,11 +206,11 @@
 "cluster.createCluster.DESCRIPTION": "描述",
 "cluster.createCluster.HYPERVISOR": "虚拟机监控程序",
 "cluster.createCluster.HINT2": "(必选) 选择虚拟机监控程序将包含此群集的云主机类型",
-"cluster.createCluster.hasPrimaryStorage()": "无主存储有资格附加.请单击下一步按钮继续.
+"cluster.createCluster.hasPrimaryStorage()": "无主存储有资格附加.请单击下一步按钮继续.",
 "cluster.createCluster.ATTACH PRIMARY STORAGE": "附加主存储",
 "cluster.createCluster.PRIMARY STORAGE": "主存储",
 "cluster.createCluster.HINT3": "(可选) 选择一个或多个附加的主存储.或做后创建群集",
-"cluster.createCluster.hasL2Network()": "没有 L2 网络有资格附加.请单击创建按钮继续.
+"cluster.createCluster.hasL2Network()": "没有 L2 网络有资格附加.请单击创建按钮继续.",
 "cluster.createCluster.ATTACH L2 NETWORK": "附加 L2 网络",
 "cluster.createCluster.L2 NETWORK": "L2 网络",
 "cluster.createCluster.HINT4": "(可选) 选择一个或多个附加的 l2 网络.或做后创建群集",
@@ -284,7 +284,7 @@
 "zone.zone.Create": "创建",
 "zone.zone.ZONE": "区域",
 "zone.zone.New Zone": "新区域域",
-"zone.zone.STATE": "国家"
+"zone.zone.STATE": "国家",
 "zone.zone.All": "所有人",
 "zone.zone.Enabled": "已启用",
 "zone.zone.Disabled": "禁用",
@@ -308,7 +308,7 @@
 "primaryStorage.primaryStorage.Disable": "禁用",
 "primaryStorage.primaryStorage.Attach Cluster": "附加群集",
 "primaryStorage.primaryStorage.Detach Cluster": "分离群集",
-"primaryStorage.primaryStorage.Reconnect": "重新连接"
+"primaryStorage.primaryStorage.Reconnect": "重新连接",
 "primaryStorage.primaryStorage.Delete": "删除",
 "primaryStorage.primaryStorage.HINT1": "单点击列来显示操作按钮",
 "primaryStorage.primaryStorage.HINT2": "双击列进入详细信息页面",
@@ -319,10 +319,10 @@
 "primaryStorage.createPrimaryStorage.DESCRIPTION": "描述",
 "primaryStorage.createPrimaryStorage.TYPE": "类型",
 "primaryStorage.createPrimaryStorage.HINT2": "(必选) 选择类型的主存储",
-"primaryStorage.createPrimaryStorage.URL": "URL"
+"primaryStorage.createPrimaryStorage.URL": "URL",
 "primaryStorage.createPrimaryStorage.HINT3": "url (必填) 为 NFS 主存储,是 'ip_or_dns_name:absolute_path',例如,'192.168.0.10: primaryStorage'",
 "primaryStorage.createPrimaryStorage.HINT4": "(必填) 为本地存储,url 是一个绝对路径,例如,'   卷的.将每个云主机上创建该文件夹.",
-"primaryStorage.createPrimaryStorage.HINT5": "(必填) 为 ISCSI 存储与 BTRFS 后端,url 是一个绝对路径,例如,'   卷的.将 BTRFS 服务器上创建文件夹.
+"primaryStorage.createPrimaryStorage.HINT5": "(必填) 为 ISCSI 存储与 BTRFS 后端,url 是一个绝对路径,例如,'   卷的.将 BTRFS 服务器上创建文件夹.",
 "primaryStorage.createPrimaryStorage.ALERT": "没有开发区域已形成.请转到",
 "primaryStorage.createPrimaryStorage.ALERT.2": "区域页",
 "primaryStorage.createPrimaryStorage.ALERT.3": "来创建一个新",
@@ -339,7 +339,7 @@
 "primaryStorage.createPrimaryStorage.HINT8": "ISCSI 服务器 (可选) CHAP 密码",
 "primaryStorage.createPrimaryStorage.HINT9": "用户必须拥有用户权限 ceph 星期一服务器上",
 "primaryStorage.createPrimaryStorage.HINT10": "请添加至少一个 ceph 星期一服务器",
-"primaryStorage.createPrimaryStorage.ALERT4": "无群集有资格附加.请单击添加按钮继续.
+"primaryStorage.createPrimaryStorage.ALERT4": "无群集有资格附加.请单击添加按钮继续.",
 "primaryStorage.createPrimaryStorage.ATTACH CLUSTER": "附加群集",
 "primaryStorage.createPrimaryStorage.CLUSTER": "集群",
 "primaryStorage.createPrimaryStorage.HINT11": "(可选) 选择要附加的一个或多个群集.或做后创建主存储",
@@ -351,7 +351,7 @@
 "primaryStorage.details.Disable": "禁用",
 "primaryStorage.details.Attach Cluster": "附加群集",
 "primaryStorage.details.Detach Cluster": "分离群集",
-"primaryStorage.details.Reconnect": "重新连接"
+"primaryStorage.details.Reconnect": "重新连接",
 "primaryStorage.details.Delete": "删除",
 "primaryStorage.details.Info": "信息",
 "primaryStorage.details.Cluster": "集群",
@@ -384,13 +384,13 @@
 "primaryStorage.attachCluster.CLUSTER": "集群",
 "primaryStorage.attachCluster.HINT1": "(必填) 选择一个或多个群集,附加",
 "primaryStorage.attachCluster.Cancel": "取消",
-"primaryStorage.attachCluster.Attach": "附加"
+"primaryStorage.attachCluster.Attach": "附加",
 "backupStorage.createBackupStorage.CREATE BACKUP STORAGE": "创建的备份存储空间",
 "backupStorage.createBackupStorage.NAME": "名称",
 "backupStorage.createBackupStorage.DESCRIPTION": "描述",
 "backupStorage.createBackupStorage.TYPE": "类型",
 "backupStorage.createBackupStorage.HINT1": "(必选) 选择类型的备份存储",
-"backupStorage.createBackupStorage.URL": "URL"
+"backupStorage.createBackupStorage.URL": "URL",
 "backupStorage.createBackupStorage.HINT2": "(必需) sftp 备份存储,url 是绝对路径,例如,'   backupStorage'",
 "backupStorage.createBackupStorage.ALERT1": "不是有效路径.有效的路径必须是绝对路径入手 ' '",
 "backupStorage.createBackupStorage.HOSTNAME": "云主机名",
@@ -400,12 +400,12 @@
 "backupStorage.createBackupStorage.HINT4": "用户必须拥有用户权限 ceph 星期一服务器上",
 "backupStorage.createBackupStorage.Add": "添加",
 "backupStorage.createBackupStorage.HINT5": "请添加至少一个 ceph 星期一服务器",
-"backupStorage.createBackupStorage.ALERT2": "没有区域有资格附加.请单击添加按钮继续.
+"backupStorage.createBackupStorage.ALERT2": "没有区域有资格附加.请单击添加按钮继续.",
 "backupStorage.createBackupStorage.ATTACH ZONE": "连接区域",
 "backupStorage.createBackupStorage.ZONE": "区域",
 "backupStorage.createBackupStorage.HINT6": "(可选) 选择要附加的一个或多个区域域.或做后添加备份存储",
 "backupStorage.createBackupStorage.Previous": "上一页",
-"backupStorage.createBackupStorage.BACKUP STORAGE INFO": "备份存储信息"
+"backupStorage.createBackupStorage.BACKUP STORAGE INFO": "备份存储信息",
 "backupStorage.backupStorage.BACKUP STORAGE": "备份存储",
 "backupStorage.backupStorage.New Backup Storage": "新备份存储",
 "backupStorage.backupStorage.FILTER BY": "过滤",
@@ -462,7 +462,7 @@
 "volume.attachVm.VM INSTANCE": "云主机",
 "volume.attachVm.HINT1": "(必填) 这里列出了正在运行或已停止的唯一 vm",
 "volume.attachVm.Cancel": "取消",
-"volume.attachVm.Attach": "附加"
+"volume.attachVm.Attach": "附加",
 "volume.backupVolume.ALERT1.1": "没有备份的存储是有资格的.如果没有备份存储已添加,请转到",
 "volume.backupVolume.ALERT1.2": "备份存储页",
 "volume.backupVolume.ALERT1.3": "来添加一个新.或请将现有的备份存储附加到此数据卷属于区域.",
@@ -531,10 +531,10 @@
 "volume.details.Action": "操作",
 "volume.details.Enable": "启用",
 "volume.details.Disable": "禁用",
-"volume.details.Attach": "附加"
+"volume.details.Attach": "附加",
 "volume.details.Detach": "分离",
-"volume.details.Take Snapshot": "创建快照"
-"volume.details.Create Template": "创建模板"
+"volume.details.Take Snapshot": "创建快照",
+"volume.details.Create Template": "创建模板",
 "volume.details.Delete": "删除",
 "volume.details.Info": "信息",
 "volume.details.Snapshot": "快照",
@@ -598,14 +598,14 @@
 "volume.volume.Action": "操作",
 "volume.volume.Enable": "启用",
 "volume.volume.Disable": "禁用",
-"volume.volume.Attach": "附加"
+"volume.volume.Attach": "附加",
 "volume.volume.Detach": "分离",
-"volume.volume.Create Template": "创建模板"
-"volume.volume.Take Snapshot": "创建快照"
+"volume.volume.Create Template": "创建模板",
+"volume.volume.Take Snapshot": "创建快照",
 "volume.volume.Delete": "删除",
 "volume.volume.HINT1": "单点击列来显示操作按钮",
 "volume.volume.HINT2": "双击列进入详细信息页面",
-"globalConfig.details.GLOBAL CONFIGURE": "全局配置"
+"globalConfig.details.GLOBAL CONFIGURE": "全局配置",
 "globalConfig.details.Action": "操作",
 "globalConfig.details.Edit": "编辑",
 "globalConfig.details.Info": "信息",
@@ -621,7 +621,7 @@
 "globalConfig.editGlobalConfig.NEW VALUE:": "新值:",
 "globalConfig.editGlobalConfig.Cancel": "取消",
 "globalConfig.editGlobalConfig.Done": "完成",
-"globalConfig.globalConfig.GLOBAL CONFIGURE": "全局配置"
+"globalConfig.globalConfig.GLOBAL CONFIGURE": "全局配置",
 "globalConfig.globalConfig.FILTER BY": "过滤",
 "globalConfig.globalConfig.VALUE": "值",
 "globalConfig.globalConfig.Confirm": "确认",
@@ -681,7 +681,7 @@
 "virtualRouterOffering.addVirtualRouterOffering.NAME": "名称",
 "virtualRouterOffering.addVirtualRouterOffering.DESCRIPTION": "描述",
 "virtualRouterOffering.addVirtualRouterOffering.CPU NUM": "CPU NUM",
-"virtualRouterOffering.addVirtualRouterOffering.ALERT4": "不是数字"
+"virtualRouterOffering.addVirtualRouterOffering.ALERT4": "不是数字",
 "virtualRouterOffering.addVirtualRouterOffering.CPU SPEED": "CPU 速度",
 "virtualRouterOffering.addVirtualRouterOffering.MEMORY": "记忆",
 "virtualRouterOffering.addVirtualRouterOffering.ALERT5": "不是有效的内存大小.内存大小可以只是一个数以不 G M K '(or lowercase) 或数字后缀",
