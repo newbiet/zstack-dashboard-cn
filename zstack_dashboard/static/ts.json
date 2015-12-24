@@ -116,7 +116,7 @@
 "vm.attachL3Network.L3 NETWORKS": "L3 网络",
 "vm.attachL3Network.HINT": "在这里列出的 (必选) L3 网络是可以附加到此 vm 的候选人",
 "vm.attachL3Network.Cancel": "取消",
-"vm.attachL3Network.Attach": "附加"
+"vm.attachL3Network.Attach": "附加",
 "host.createHost.hasCluster()": "已创建无群集.请转到",
 "host.createHost.cluster page": "群集页",
 "host.createHost.hasCluster2()": "来创建一个新",
@@ -330,9 +330,9 @@
 "primaryStorage.createPrimaryStorage.ALERT2": "不是绝对路径.该路径必须与开始 ' '",
 "primaryStorage.createPrimaryStorage.ALERT3": "不是绝对路径.该路径必须与开始 ' '",
 "primaryStorage.createPrimaryStorage.HOSTNAME": "云主机名",
-"primaryStorage.createPrimaryStorage.SSH USERNAME": "SSH 用户名"
+"primaryStorage.createPrimaryStorage.SSH USERNAME": "SSH 用户名",
 "primaryStorage.createPrimaryStorage.HINT6": "用户必须拥有用户权限 btrfs 服务器上",
-"primaryStorage.createPrimaryStorage.SSH PASSWORD": "SSH 密码"
+"primaryStorage.createPrimaryStorage.SSH PASSWORD": "SSH 密码",
 "primaryStorage.createPrimaryStorage.CHAP USERNAME": "CHAP 用户名",
 "primaryStorage.createPrimaryStorage.HINT7": "ISCSI 服务器 (可选) CHAP 用户名",
 "primaryStorage.createPrimaryStorage.CHAP PASSWORD": "CHAP 密码",
@@ -561,9 +561,9 @@
 "volume.reverSnapshot.VM THE VOLUME ATTACHED:": "VM 卷附:",
 "volume.reverSnapshot.HINT": "卷可以只被还原到快照时停止的 vm 它重视",
 "volume.reverSnapshot.Cancel": "取消",
-"volume.reverSnapshot.Revert": "恢复"
+"volume.reverSnapshot.Revert": "恢复",
 "volume.snapshotDetails.VOLUME": "卷",
-"volume.snapshotDetails.snapshots": "快照"
+"volume.snapshotDetails.snapshots": "快照",
 "volume.snapshotDetails.Revert Volume To This Snapshot": "恢复卷到此快照",
 "volume.snapshotDetails.Delete From Backup Storage": "删除从备份存储",
 "volume.snapshotDetails.Delete": "删除",
