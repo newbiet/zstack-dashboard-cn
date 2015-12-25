@@ -107,11 +107,11 @@
 "backupStorage.ts.TOTAL CAPACITY": "总容量",
 "backupStorage.ts.AVAILABLE CAPACITY": "可用容量",
 "backupStorage.ts.TYPE": "类型",
-"backupStorage.ts.STATE": "国家"
+"backupStorage.ts.STATE": "国家",
 "backupStorage.ts.STATUS": "地位",
 "backupStorage.ts.UUID": "UUID",
 "backupStorage.ts.None": "无",
-"backupStorage.ts.State": "国家"
+"backupStorage.ts.State": "国家",
 "backupStorage.ts.Status": "地位",
 "backupStorage.ts.Type": "类型",
 "backupStorage.ts.Name": "名称",
@@ -255,7 +255,7 @@
 "vip.ts.L2 Network UUID": "L2 网络 UUID",
 "vip.ts.UUID": "UUID",
 "eip.ts.NAME": "名称",
-"eip.ts.STATE": "国家"
+"eip.ts.STATE": "国家",
 "eip.ts.VIP IP": "VIP IP",
 "eip.ts.VM NIC IP": "VM 网卡 IP",
 "eip.ts.None": "无",
