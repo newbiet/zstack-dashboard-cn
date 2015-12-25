@@ -27,7 +27,7 @@
         "vm.ts.CPU Speed": "CPU Speed:",
         "vm.ts.Memory": "Memory:",
         "vm.ts.Cluster UUID": "Cluster UUID",
-        "vm.ts.HYPERVISOR": "HYPERVISOR:"
+        "vm.ts.HYPERVISOR": "HYPERVISOR:",
         "vm.ts.Disk Size": "Disk Size:",
         "vm.ts.Platform": "Platform:",
         "vm.ts.Media Type": "Media Type:",
@@ -295,7 +295,7 @@
         "portForwarding.ts.VIP PORT START": "VIP PORT START",
         "portForwarding.ts.VIP Port Start": "VIP Port Start",
         "portForwarding.ts.VIP PORT END": "VIP PORT END",
-        "portForwarding.ts.VIP Port End": "VIP Port End"
+        "portForwarding.ts.VIP Port End": "VIP Port End",
         "portForwarding.ts.GUEST PORT START": "GUEST PORT START",
         "portForwarding.ts.GUEST PORT END": "GUEST PORT END",
         "portForwarding.ts.VIP IP": "VIP IP",
