@@ -40,7 +40,7 @@
 "host.ts.STATUS": "地位",
 "host.ts.UUID": "UUID",
 "host.ts.None": "无",
-"host.ts.State": "国家"
+"host.ts.State": "国家",
 "host.ts.Status": "地位",
 "host.ts.HypervisorType": "HypervisorType",
 "host.ts.Name": "名称",
@@ -130,7 +130,7 @@
 "primaryStorage.ts.STATUS": "地位",
 "primaryStorage.ts.UUID": "UUID",
 "primaryStorage.ts.None": "无",
-"primaryStorage.ts.State": "国家"
+"primaryStorage.ts.State": "国家",
 "primaryStorage.ts.Type": "类型",
 "primaryStorage.ts.Name": "名称",
 "primaryStorage.ts.Description": "描述",
@@ -225,7 +225,7 @@
 "securityGroup.ts.HINT4": "这些结果不是可恢复的",
 "securityGroup.ts.DELETE L3 NETWORK": "删除 L3 网络",
 "securityGroup.ts.HINT5": "删除安全组将导致",
-"securityGroup.ts.HINT6": "将删除此安全组中的所有规则,"
+"securityGroup.ts.HINT6": "将删除此安全组中的所有规则",
 "securityGroup.ts.HINT7": "所有l3Networks 已附加此安全组将被拆",
 "securityGroup.ts.HINT8": "这些结果不是可恢复的",
 "securityGroup.ts.Zone UUID": "区 UUID",
@@ -276,14 +276,14 @@
 "eip.ts.VM UUID": "VM UUID",
 "eip.ts.Nic DeviceId": "Nic DeviceId",
 "eip.ts.Nic Ip": "Nic Ip",
-"eip.ts.Nic Netmask": "Nic 子网掩码"
+"eip.ts.Nic Netmask": "Nic 子网掩码",
 "eip.ts.Nic Gateway": "Nic 网关",
 "eip.ts.Nic Mac": "网卡 Mac",
 "eip.ts.L3 Network UUID": "L3 网络 UUID",
 "portForwarding.ts.NAME": "名称",
 "portForwarding.ts.Name": "名称",
-"portForwarding.ts.STATE": "国家"
-"portForwarding.ts.State": "国家"
+"portForwarding.ts.STATE": "国家",
+"portForwarding.ts.State": "国家",
 "portForwarding.ts.VIP PORT START": "VIP 端口开始",
 "portForwarding.ts.VIP Port Start": "VIP 端口开始",
 "portForwarding.ts.VIP PORT END": "VIP 端口终结",
@@ -332,7 +332,7 @@
 "virtualRouter.ts.DEVICE ID": "设备 ID",
 "virtualRouter.ts.L3 Network": "L3 网络",
 "virtualRouter.ts.IP": "IP",
-"virtualRouter.ts.NETMASK": "子网掩码"
+"virtualRouter.ts.NETMASK": "子网掩码",
 "virtualRouter.ts.GATEWAY": "网关",
 "virtualRouter.ts.MAC": "MAC",
 "virtualRouter.ts.TYPE": "类型",
@@ -383,7 +383,7 @@
 "virtualRouterOffering.ts.CPU SPEED": "CPU 速度",
 "virtualRouterOffering.ts.MEMORY": "记忆",
 "virtualRouterOffering.ts.None": "无",
-"virtualRouterOffering.ts.State": "国家"
+"virtualRouterOffering.ts.State": "国家",
 "virtualRouterOffering.ts.Name": "名称",
 "virtualRouterOffering.ts.Description": "描述",
 "virtualRouterOffering.ts.CPU Number": "CPU 数目",
