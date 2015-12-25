@@ -1,3 +1,4 @@
+  {
         "vm.ts.NAME": "NAME",
         "vm.ts.DESCRIPTION": "DESCRIPTION",
         "vm.ts.DEFAULT IP": "DEFAULT IP",
@@ -398,6 +399,6 @@
         "virtualRouterOffering.ts.Memory": "Memory",
         "virtualRouterOffering.ts.Created Date": "Created Date",
         "virtualRouterOffering.ts.Last Updated Date": "Last Updated Date",
-        "virtualRouterOffering.ts.Format": "Format",
-    } 
+        "virtualRouterOffering.ts.Format": "Format"
+} 
 
